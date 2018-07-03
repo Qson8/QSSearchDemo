@@ -1,0 +1,771 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		EC5D9F4120EA0F7300E338F3 /* QSSearchBar.m in Sources */ = {isa = PBXBuildFile; fileRef = EC5D9F3F20EA0F7300E338F3 /* QSSearchBar.m */; };
+		EC5D9F4420EA151100E338F3 /* QSSearchDemo2.m in Sources */ = {isa = PBXBuildFile; fileRef = EC5D9F4320EA151100E338F3 /* QSSearchDemo2.m */; };
+		EC5D9F4720EA6DB200E338F3 /* QSSearchBarButtonItem.m in Sources */ = {isa = PBXBuildFile; fileRef = EC5D9F4620EA6DB200E338F3 /* QSSearchBarButtonItem.m */; };
+		EC5D9F4A20EA71CF00E338F3 /* QSSearchBarSearchItem.m in Sources */ = {isa = PBXBuildFile; fileRef = EC5D9F4920EA71CF00E338F3 /* QSSearchBarSearchItem.m */; };
+		EC5D9F4D20EAFE3800E338F3 /* QSSearchDemo3.m in Sources */ = {isa = PBXBuildFile; fileRef = EC5D9F4C20EAFE3800E338F3 /* QSSearchDemo3.m */; };
+		EC5D9F5020EB06DD00E338F3 /* QSSearchBarButtonItem+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = EC5D9F4F20EB06DD00E338F3 /* QSSearchBarButtonItem+Extension.m */; };
+		EC5D9F5320EB06FA00E338F3 /* QSSearchBarSearchItem+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = EC5D9F5220EB06FA00E338F3 /* QSSearchBarSearchItem+Extension.m */; };
+		EC5D9F5620EB09A200E338F3 /* QSSearchDemo4.m in Sources */ = {isa = PBXBuildFile; fileRef = EC5D9F5520EB09A200E338F3 /* QSSearchDemo4.m */; };
+		EC5D9F5A20EB0CAE00E338F3 /* goback_search@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = EC5D9F5920EB0CAE00E338F3 /* goback_search@3x.png */; };
+		EC5D9F5D20EB0D0500E338F3 /* QSSearchDemo5.m in Sources */ = {isa = PBXBuildFile; fileRef = EC5D9F5C20EB0D0500E338F3 /* QSSearchDemo5.m */; };
+		ECF8BC6B20B53D8D000F009B /* QSSearchDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = ECF8BC6A20B53D8D000F009B /* QSSearchDemoTests.m */; };
+		ECF8BC7620B53D8D000F009B /* QSSearchDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = ECF8BC7520B53D8D000F009B /* QSSearchDemoUITests.m */; };
+		ECF8BC8D20B53E42000F009B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ECF8BC8520B53E42000F009B /* Assets.xcassets */; };
+		ECF8BC8E20B53E42000F009B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ECF8BC8620B53E42000F009B /* ViewController.m */; };
+		ECF8BC8F20B53E42000F009B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ECF8BC8720B53E42000F009B /* LaunchScreen.storyboard */; };
+		ECF8BC9020B53E42000F009B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = ECF8BC8920B53E42000F009B /* main.m */; };
+		ECF8BC9120B53E42000F009B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = ECF8BC8A20B53E42000F009B /* AppDelegate.m */; };
+		ECF8BC9220B53E42000F009B /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = ECF8BC8B20B53E42000F009B /* Info.plist */; };
+		ECF8BC9F20B54956000F009B /* mirror_search@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = ECF8BC9E20B54955000F009B /* mirror_search@3x.png */; };
+		ECF8BCA220B54A32000F009B /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = ECF8BCA120B54A32000F009B /* UIView+Extension.m */; };
+		ECF8BCAB20B54EFB000F009B /* NSString+AttributedString.m in Sources */ = {isa = PBXBuildFile; fileRef = ECF8BCAA20B54EFB000F009B /* NSString+AttributedString.m */; };
+		ECF8BCB020B68922000F009B /* QSSearchDemo1.m in Sources */ = {isa = PBXBuildFile; fileRef = ECF8BCAF20B68922000F009B /* QSSearchDemo1.m */; };
+		ECF8BCB320B68A7F000F009B /* UINavigationController+FDFullscreenPopGesture.m in Sources */ = {isa = PBXBuildFile; fileRef = ECF8BCB220B68A7F000F009B /* UINavigationController+FDFullscreenPopGesture.m */; };
+		ECF8BCB620B69229000F009B /* QSBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ECF8BCB520B69229000F009B /* QSBaseViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		ECF8BC6720B53D8D000F009B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = ECF8BC4620B53D8D000F009B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = ECF8BC4D20B53D8D000F009B;
+			remoteInfo = QSSearchDemo;
+		};
+		ECF8BC7220B53D8D000F009B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = ECF8BC4620B53D8D000F009B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = ECF8BC4D20B53D8D000F009B;
+			remoteInfo = QSSearchDemo;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		EC1C91B920B702880095E12E /* QSSearchBar.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QSSearchBar.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		EC1C91BB20B702890095E12E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EC5D9F3F20EA0F7300E338F3 /* QSSearchBar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QSSearchBar.m; sourceTree = "<group>"; };
+		EC5D9F4020EA0F7300E338F3 /* QSSearchBar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QSSearchBar.h; sourceTree = "<group>"; };
+		EC5D9F4220EA151100E338F3 /* QSSearchDemo2.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QSSearchDemo2.h; sourceTree = "<group>"; };
+		EC5D9F4320EA151100E338F3 /* QSSearchDemo2.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QSSearchDemo2.m; sourceTree = "<group>"; };
+		EC5D9F4520EA6DB200E338F3 /* QSSearchBarButtonItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QSSearchBarButtonItem.h; sourceTree = "<group>"; };
+		EC5D9F4620EA6DB200E338F3 /* QSSearchBarButtonItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QSSearchBarButtonItem.m; sourceTree = "<group>"; };
+		EC5D9F4820EA71CF00E338F3 /* QSSearchBarSearchItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QSSearchBarSearchItem.h; sourceTree = "<group>"; };
+		EC5D9F4920EA71CF00E338F3 /* QSSearchBarSearchItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QSSearchBarSearchItem.m; sourceTree = "<group>"; };
+		EC5D9F4B20EAFE3800E338F3 /* QSSearchDemo3.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QSSearchDemo3.h; sourceTree = "<group>"; };
+		EC5D9F4C20EAFE3800E338F3 /* QSSearchDemo3.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QSSearchDemo3.m; sourceTree = "<group>"; };
+		EC5D9F4E20EB06DD00E338F3 /* QSSearchBarButtonItem+Extension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "QSSearchBarButtonItem+Extension.h"; sourceTree = "<group>"; };
+		EC5D9F4F20EB06DD00E338F3 /* QSSearchBarButtonItem+Extension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "QSSearchBarButtonItem+Extension.m"; sourceTree = "<group>"; };
+		EC5D9F5120EB06FA00E338F3 /* QSSearchBarSearchItem+Extension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "QSSearchBarSearchItem+Extension.h"; sourceTree = "<group>"; };
+		EC5D9F5220EB06FA00E338F3 /* QSSearchBarSearchItem+Extension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "QSSearchBarSearchItem+Extension.m"; sourceTree = "<group>"; };
+		EC5D9F5420EB09A200E338F3 /* QSSearchDemo4.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QSSearchDemo4.h; sourceTree = "<group>"; };
+		EC5D9F5520EB09A200E338F3 /* QSSearchDemo4.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QSSearchDemo4.m; sourceTree = "<group>"; };
+		EC5D9F5920EB0CAE00E338F3 /* goback_search@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "goback_search@3x.png"; sourceTree = "<group>"; };
+		EC5D9F5B20EB0D0500E338F3 /* QSSearchDemo5.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QSSearchDemo5.h; sourceTree = "<group>"; };
+		EC5D9F5C20EB0D0500E338F3 /* QSSearchDemo5.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QSSearchDemo5.m; sourceTree = "<group>"; };
+		ECF8BC4E20B53D8D000F009B /* QSSearchDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QSSearchDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		ECF8BC6620B53D8D000F009B /* QSSearchDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QSSearchDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		ECF8BC6A20B53D8D000F009B /* QSSearchDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QSSearchDemoTests.m; sourceTree = "<group>"; };
+		ECF8BC6C20B53D8D000F009B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ECF8BC7120B53D8D000F009B /* QSSearchDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QSSearchDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		ECF8BC7520B53D8D000F009B /* QSSearchDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QSSearchDemoUITests.m; sourceTree = "<group>"; };
+		ECF8BC7720B53D8D000F009B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ECF8BC8420B53E42000F009B /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		ECF8BC8520B53E42000F009B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		ECF8BC8620B53E42000F009B /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		ECF8BC8820B53E42000F009B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		ECF8BC8920B53E42000F009B /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		ECF8BC8A20B53E42000F009B /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		ECF8BC8B20B53E42000F009B /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ECF8BC8C20B53E42000F009B /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		ECF8BC9B20B540BC000F009B /* QSMacro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QSMacro.h; sourceTree = "<group>"; };
+		ECF8BC9E20B54955000F009B /* mirror_search@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mirror_search@3x.png"; sourceTree = "<group>"; };
+		ECF8BCA020B54A32000F009B /* UIView+Extension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+Extension.h"; sourceTree = "<group>"; };
+		ECF8BCA120B54A32000F009B /* UIView+Extension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+Extension.m"; sourceTree = "<group>"; };
+		ECF8BCA920B54EFB000F009B /* NSString+AttributedString.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+AttributedString.h"; sourceTree = "<group>"; };
+		ECF8BCAA20B54EFB000F009B /* NSString+AttributedString.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+AttributedString.m"; sourceTree = "<group>"; };
+		ECF8BCAE20B68922000F009B /* QSSearchDemo1.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QSSearchDemo1.h; sourceTree = "<group>"; };
+		ECF8BCAF20B68922000F009B /* QSSearchDemo1.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QSSearchDemo1.m; sourceTree = "<group>"; };
+		ECF8BCB120B68A7F000F009B /* UINavigationController+FDFullscreenPopGesture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+FDFullscreenPopGesture.h"; sourceTree = "<group>"; };
+		ECF8BCB220B68A7F000F009B /* UINavigationController+FDFullscreenPopGesture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+FDFullscreenPopGesture.m"; sourceTree = "<group>"; };
+		ECF8BCB420B69229000F009B /* QSBaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QSBaseViewController.h; sourceTree = "<group>"; };
+		ECF8BCB520B69229000F009B /* QSBaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QSBaseViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EC1C91B620B702880095E12E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ECF8BC4B20B53D8D000F009B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ECF8BC6320B53D8D000F009B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ECF8BC6E20B53D8D000F009B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EC1C91BA20B702890095E12E /* QSSearchBar */ = {
+			isa = PBXGroup;
+			children = (
+				EC1C91BB20B702890095E12E /* Info.plist */,
+			);
+			path = QSSearchBar;
+			sourceTree = "<group>";
+		};
+		ECF8BC4520B53D8D000F009B = {
+			isa = PBXGroup;
+			children = (
+				ECF8BC5020B53D8D000F009B /* QSSearchDemo */,
+				ECF8BC6920B53D8D000F009B /* QSSearchDemoTests */,
+				ECF8BC7420B53D8D000F009B /* QSSearchDemoUITests */,
+				EC1C91BA20B702890095E12E /* QSSearchBar */,
+				ECF8BC4F20B53D8D000F009B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		ECF8BC4F20B53D8D000F009B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				ECF8BC4E20B53D8D000F009B /* QSSearchDemo.app */,
+				ECF8BC6620B53D8D000F009B /* QSSearchDemoTests.xctest */,
+				ECF8BC7120B53D8D000F009B /* QSSearchDemoUITests.xctest */,
+				EC1C91B920B702880095E12E /* QSSearchBar.bundle */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		ECF8BC5020B53D8D000F009B /* QSSearchDemo */ = {
+			isa = PBXGroup;
+			children = (
+				ECF8BC9420B53EC0000F009B /* QSSearchView */,
+				ECF8BC9320B53E69000F009B /* Demo */,
+				ECF8BC8320B53E42000F009B /* System */,
+			);
+			path = QSSearchDemo;
+			sourceTree = "<group>";
+		};
+		ECF8BC6920B53D8D000F009B /* QSSearchDemoTests */ = {
+			isa = PBXGroup;
+			children = (
+				ECF8BC6A20B53D8D000F009B /* QSSearchDemoTests.m */,
+				ECF8BC6C20B53D8D000F009B /* Info.plist */,
+			);
+			path = QSSearchDemoTests;
+			sourceTree = "<group>";
+		};
+		ECF8BC7420B53D8D000F009B /* QSSearchDemoUITests */ = {
+			isa = PBXGroup;
+			children = (
+				ECF8BC7520B53D8D000F009B /* QSSearchDemoUITests.m */,
+				ECF8BC7720B53D8D000F009B /* Info.plist */,
+			);
+			path = QSSearchDemoUITests;
+			sourceTree = "<group>";
+		};
+		ECF8BC8320B53E42000F009B /* System */ = {
+			isa = PBXGroup;
+			children = (
+				ECF8BC8420B53E42000F009B /* AppDelegate.h */,
+				ECF8BC8A20B53E42000F009B /* AppDelegate.m */,
+				ECF8BC8C20B53E42000F009B /* ViewController.h */,
+				ECF8BC8620B53E42000F009B /* ViewController.m */,
+				ECF8BC8520B53E42000F009B /* Assets.xcassets */,
+				ECF8BC8720B53E42000F009B /* LaunchScreen.storyboard */,
+				ECF8BC8920B53E42000F009B /* main.m */,
+				ECF8BC8B20B53E42000F009B /* Info.plist */,
+			);
+			path = System;
+			sourceTree = "<group>";
+		};
+		ECF8BC9320B53E69000F009B /* Demo */ = {
+			isa = PBXGroup;
+			children = (
+				ECF8BCB420B69229000F009B /* QSBaseViewController.h */,
+				ECF8BCB520B69229000F009B /* QSBaseViewController.m */,
+				ECF8BCAE20B68922000F009B /* QSSearchDemo1.h */,
+				ECF8BCAF20B68922000F009B /* QSSearchDemo1.m */,
+				EC5D9F4220EA151100E338F3 /* QSSearchDemo2.h */,
+				EC5D9F4320EA151100E338F3 /* QSSearchDemo2.m */,
+				EC5D9F4B20EAFE3800E338F3 /* QSSearchDemo3.h */,
+				EC5D9F4C20EAFE3800E338F3 /* QSSearchDemo3.m */,
+				EC5D9F5420EB09A200E338F3 /* QSSearchDemo4.h */,
+				EC5D9F5520EB09A200E338F3 /* QSSearchDemo4.m */,
+				EC5D9F5B20EB0D0500E338F3 /* QSSearchDemo5.h */,
+				EC5D9F5C20EB0D0500E338F3 /* QSSearchDemo5.m */,
+			);
+			path = Demo;
+			sourceTree = "<group>";
+		};
+		ECF8BC9420B53EC0000F009B /* QSSearchView */ = {
+			isa = PBXGroup;
+			children = (
+				EC5D9F4020EA0F7300E338F3 /* QSSearchBar.h */,
+				EC5D9F3F20EA0F7300E338F3 /* QSSearchBar.m */,
+				EC5D9F4520EA6DB200E338F3 /* QSSearchBarButtonItem.h */,
+				EC5D9F4620EA6DB200E338F3 /* QSSearchBarButtonItem.m */,
+				EC5D9F4820EA71CF00E338F3 /* QSSearchBarSearchItem.h */,
+				EC5D9F4920EA71CF00E338F3 /* QSSearchBarSearchItem.m */,
+				ECF8BC9B20B540BC000F009B /* QSMacro.h */,
+				ECF8BC9E20B54955000F009B /* mirror_search@3x.png */,
+				EC5D9F5920EB0CAE00E338F3 /* goback_search@3x.png */,
+				ECF8BC9C20B5471E000F009B /* Categary */,
+			);
+			path = QSSearchView;
+			sourceTree = "<group>";
+		};
+		ECF8BC9C20B5471E000F009B /* Categary */ = {
+			isa = PBXGroup;
+			children = (
+				ECF8BCB120B68A7F000F009B /* UINavigationController+FDFullscreenPopGesture.h */,
+				ECF8BCB220B68A7F000F009B /* UINavigationController+FDFullscreenPopGesture.m */,
+				ECF8BCA020B54A32000F009B /* UIView+Extension.h */,
+				ECF8BCA120B54A32000F009B /* UIView+Extension.m */,
+				ECF8BCA920B54EFB000F009B /* NSString+AttributedString.h */,
+				ECF8BCAA20B54EFB000F009B /* NSString+AttributedString.m */,
+				EC5D9F4E20EB06DD00E338F3 /* QSSearchBarButtonItem+Extension.h */,
+				EC5D9F4F20EB06DD00E338F3 /* QSSearchBarButtonItem+Extension.m */,
+				EC5D9F5120EB06FA00E338F3 /* QSSearchBarSearchItem+Extension.h */,
+				EC5D9F5220EB06FA00E338F3 /* QSSearchBarSearchItem+Extension.m */,
+			);
+			path = Categary;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EC1C91B820B702880095E12E /* QSSearchBar */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EC1C91BE20B702890095E12E /* Build configuration list for PBXNativeTarget "QSSearchBar" */;
+			buildPhases = (
+				EC1C91B520B702880095E12E /* Sources */,
+				EC1C91B620B702880095E12E /* Frameworks */,
+				EC1C91B720B702880095E12E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = QSSearchBar;
+			productName = QSSearchBar;
+			productReference = EC1C91B920B702880095E12E /* QSSearchBar.bundle */;
+			productType = "com.apple.product-type.bundle";
+		};
+		ECF8BC4D20B53D8D000F009B /* QSSearchDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ECF8BC7A20B53D8D000F009B /* Build configuration list for PBXNativeTarget "QSSearchDemo" */;
+			buildPhases = (
+				ECF8BC4A20B53D8D000F009B /* Sources */,
+				ECF8BC4B20B53D8D000F009B /* Frameworks */,
+				ECF8BC4C20B53D8D000F009B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = QSSearchDemo;
+			productName = QSSearchDemo;
+			productReference = ECF8BC4E20B53D8D000F009B /* QSSearchDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		ECF8BC6520B53D8D000F009B /* QSSearchDemoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ECF8BC7D20B53D8D000F009B /* Build configuration list for PBXNativeTarget "QSSearchDemoTests" */;
+			buildPhases = (
+				ECF8BC6220B53D8D000F009B /* Sources */,
+				ECF8BC6320B53D8D000F009B /* Frameworks */,
+				ECF8BC6420B53D8D000F009B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				ECF8BC6820B53D8D000F009B /* PBXTargetDependency */,
+			);
+			name = QSSearchDemoTests;
+			productName = QSSearchDemoTests;
+			productReference = ECF8BC6620B53D8D000F009B /* QSSearchDemoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		ECF8BC7020B53D8D000F009B /* QSSearchDemoUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ECF8BC8020B53D8D000F009B /* Build configuration list for PBXNativeTarget "QSSearchDemoUITests" */;
+			buildPhases = (
+				ECF8BC6D20B53D8D000F009B /* Sources */,
+				ECF8BC6E20B53D8D000F009B /* Frameworks */,
+				ECF8BC6F20B53D8D000F009B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				ECF8BC7320B53D8D000F009B /* PBXTargetDependency */,
+			);
+			name = QSSearchDemoUITests;
+			productName = QSSearchDemoUITests;
+			productReference = ECF8BC7120B53D8D000F009B /* QSSearchDemoUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		ECF8BC4620B53D8D000F009B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = Qson;
+				TargetAttributes = {
+					EC1C91B820B702880095E12E = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+					ECF8BC4D20B53D8D000F009B = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+					ECF8BC6520B53D8D000F009B = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = ECF8BC4D20B53D8D000F009B;
+					};
+					ECF8BC7020B53D8D000F009B = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = ECF8BC4D20B53D8D000F009B;
+					};
+				};
+			};
+			buildConfigurationList = ECF8BC4920B53D8D000F009B /* Build configuration list for PBXProject "QSSearchDemo" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = ECF8BC4520B53D8D000F009B;
+			productRefGroup = ECF8BC4F20B53D8D000F009B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				ECF8BC4D20B53D8D000F009B /* QSSearchDemo */,
+				ECF8BC6520B53D8D000F009B /* QSSearchDemoTests */,
+				ECF8BC7020B53D8D000F009B /* QSSearchDemoUITests */,
+				EC1C91B820B702880095E12E /* QSSearchBar */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EC1C91B720B702880095E12E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ECF8BC4C20B53D8D000F009B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ECF8BC8D20B53E42000F009B /* Assets.xcassets in Resources */,
+				ECF8BC9F20B54956000F009B /* mirror_search@3x.png in Resources */,
+				EC5D9F5A20EB0CAE00E338F3 /* goback_search@3x.png in Resources */,
+				ECF8BC8F20B53E42000F009B /* LaunchScreen.storyboard in Resources */,
+				ECF8BC9220B53E42000F009B /* Info.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ECF8BC6420B53D8D000F009B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ECF8BC6F20B53D8D000F009B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EC1C91B520B702880095E12E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ECF8BC4A20B53D8D000F009B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EC5D9F5020EB06DD00E338F3 /* QSSearchBarButtonItem+Extension.m in Sources */,
+				EC5D9F5D20EB0D0500E338F3 /* QSSearchDemo5.m in Sources */,
+				ECF8BCA220B54A32000F009B /* UIView+Extension.m in Sources */,
+				EC5D9F4120EA0F7300E338F3 /* QSSearchBar.m in Sources */,
+				EC5D9F4A20EA71CF00E338F3 /* QSSearchBarSearchItem.m in Sources */,
+				ECF8BCB620B69229000F009B /* QSBaseViewController.m in Sources */,
+				ECF8BC9020B53E42000F009B /* main.m in Sources */,
+				EC5D9F5320EB06FA00E338F3 /* QSSearchBarSearchItem+Extension.m in Sources */,
+				EC5D9F4720EA6DB200E338F3 /* QSSearchBarButtonItem.m in Sources */,
+				ECF8BCB320B68A7F000F009B /* UINavigationController+FDFullscreenPopGesture.m in Sources */,
+				ECF8BC8E20B53E42000F009B /* ViewController.m in Sources */,
+				ECF8BC9120B53E42000F009B /* AppDelegate.m in Sources */,
+				EC5D9F4420EA151100E338F3 /* QSSearchDemo2.m in Sources */,
+				EC5D9F4D20EAFE3800E338F3 /* QSSearchDemo3.m in Sources */,
+				EC5D9F5620EB09A200E338F3 /* QSSearchDemo4.m in Sources */,
+				ECF8BCAB20B54EFB000F009B /* NSString+AttributedString.m in Sources */,
+				ECF8BCB020B68922000F009B /* QSSearchDemo1.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ECF8BC6220B53D8D000F009B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ECF8BC6B20B53D8D000F009B /* QSSearchDemoTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ECF8BC6D20B53D8D000F009B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ECF8BC7620B53D8D000F009B /* QSSearchDemoUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		ECF8BC6820B53D8D000F009B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = ECF8BC4D20B53D8D000F009B /* QSSearchDemo */;
+			targetProxy = ECF8BC6720B53D8D000F009B /* PBXContainerItemProxy */;
+		};
+		ECF8BC7320B53D8D000F009B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = ECF8BC4D20B53D8D000F009B /* QSSearchDemo */;
+			targetProxy = ECF8BC7220B53D8D000F009B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		ECF8BC8720B53E42000F009B /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				ECF8BC8820B53E42000F009B /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		EC1C91BC20B702890095E12E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = BB535CKPZQ;
+				INFOPLIST_FILE = QSSearchBar/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				PRODUCT_BUNDLE_IDENTIFIER = Qson.QSSearchBar;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos11.2;
+				SKIP_INSTALL = YES;
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Debug;
+		};
+		EC1C91BD20B702890095E12E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = BB535CKPZQ;
+				INFOPLIST_FILE = QSSearchBar/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				PRODUCT_BUNDLE_IDENTIFIER = Qson.QSSearchBar;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos11.2;
+				SKIP_INSTALL = YES;
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Release;
+		};
+		ECF8BC7820B53D8D000F009B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		ECF8BC7920B53D8D000F009B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		ECF8BC7B20B53D8D000F009B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = BT726ND66X;
+				INFOPLIST_FILE = "$(SRCROOT)/QSSearchDemo/System/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Qson.QSSearchDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		ECF8BC7C20B53D8D000F009B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = BT726ND66X;
+				INFOPLIST_FILE = "$(SRCROOT)/QSSearchDemo/System/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Qson.QSSearchDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		ECF8BC7E20B53D8D000F009B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = QSSearchDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Qson.QSSearchDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/QSSearchDemo.app/QSSearchDemo";
+			};
+			name = Debug;
+		};
+		ECF8BC7F20B53D8D000F009B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = QSSearchDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Qson.QSSearchDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/QSSearchDemo.app/QSSearchDemo";
+			};
+			name = Release;
+		};
+		ECF8BC8120B53D8D000F009B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = QSSearchDemoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Qson.QSSearchDemoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = QSSearchDemo;
+			};
+			name = Debug;
+		};
+		ECF8BC8220B53D8D000F009B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = QSSearchDemoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Qson.QSSearchDemoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = QSSearchDemo;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EC1C91BE20B702890095E12E /* Build configuration list for PBXNativeTarget "QSSearchBar" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EC1C91BC20B702890095E12E /* Debug */,
+				EC1C91BD20B702890095E12E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		ECF8BC4920B53D8D000F009B /* Build configuration list for PBXProject "QSSearchDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ECF8BC7820B53D8D000F009B /* Debug */,
+				ECF8BC7920B53D8D000F009B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		ECF8BC7A20B53D8D000F009B /* Build configuration list for PBXNativeTarget "QSSearchDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ECF8BC7B20B53D8D000F009B /* Debug */,
+				ECF8BC7C20B53D8D000F009B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		ECF8BC7D20B53D8D000F009B /* Build configuration list for PBXNativeTarget "QSSearchDemoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ECF8BC7E20B53D8D000F009B /* Debug */,
+				ECF8BC7F20B53D8D000F009B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		ECF8BC8020B53D8D000F009B /* Build configuration list for PBXNativeTarget "QSSearchDemoUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ECF8BC8120B53D8D000F009B /* Debug */,
+				ECF8BC8220B53D8D000F009B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = ECF8BC4620B53D8D000F009B /* Project object */;
+}
