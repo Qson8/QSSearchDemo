@@ -24,8 +24,6 @@
 #endif
 
 #define kSearchBarH (44)
-#define kCancleBtnW (40 + 20)
-#define kCancleBtnH (18)
 #define kSearchBarTextH (31)
 #define kMargin (10)
 

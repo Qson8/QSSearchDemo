@@ -85,8 +85,8 @@
     
     if(_rightButtonItem.title.length || _rightButtonItem.image) {
         w = self.rightButton.width;
-        h = kCancleBtnH;
-        x = kScreenWidth - w;
+        h = kSearchBarTextH;
+        x = kScreenWidth - w  - _rightButtonItem.marginEdge.right;
         y = (kSearchBarH * 0.5 - h * 0.5);
         self.rightButton.frame = CGRectMake(x, y, w, h);
     }
@@ -96,8 +96,8 @@
     
     if(_leftButtonItem.title.length || _leftButtonItem.image) {
         w = self.leftButton.width;
-        h = kCancleBtnH;
-        x = 0;
+        h = kSearchBarTextH;
+        x = _leftButtonItem.marginEdge.left;
         y = (kSearchBarH * 0.5 - h * 0.5);
         self.leftButton.frame = CGRectMake(x, y, w, h);
     }
@@ -105,8 +105,8 @@
         self.leftButton.frame = CGRectZero;
     }
     
-    x = CGRectGetMaxX(self.leftButton.frame) + _searchBarItem.searchBarMargin;
-    w = self.contentView.width - x - _searchBarItem.searchBarMargin - self.rightButton.width;
+    x = CGRectGetMaxX(self.leftButton.frame) + _leftButtonItem.marginEdge.right + _searchBarItem.searchBarMargin;
+    w = self.contentView.width - x - _searchBarItem.searchBarMargin - self.rightButton.width - _rightButtonItem.marginEdge.right - _rightButtonItem.marginEdge.left;
     h = kSearchBarTextH;
     y = (self.contentView.height - h) * 0.5;
     self.searchBarText.frame = CGRectMake(x, y, w, h);
@@ -156,6 +156,9 @@
     [self.leftButton setImage:leftButtonItem.image forState:UIControlStateNormal];
     [self.leftButton setContentEdgeInsets:leftButtonItem.contentEdge];
     [self.leftButton addTarget:leftButtonItem.target action:leftButtonItem.action forControlEvents:(UIControlEventTouchUpInside)];
+    [self.leftButton setBackgroundColor:leftButtonItem.backgroundColor];
+    self.leftButton.layer.cornerRadius = leftButtonItem.cornerRadius;
+    
     [self.leftButton sizeToFit];
     [self setupFrame];
 }
@@ -170,6 +173,8 @@
     [self.rightButton setImage:rightButtonItem.image forState:UIControlStateNormal];
     [self.rightButton setContentEdgeInsets:rightButtonItem.contentEdge];
     [self.rightButton addTarget:rightButtonItem.target action:rightButtonItem.action forControlEvents:(UIControlEventTouchUpInside)];
+    [self.rightButton setBackgroundColor:rightButtonItem.backgroundColor];
+    self.rightButton.layer.cornerRadius = rightButtonItem.cornerRadius;
     
     [self.rightButton sizeToFit];
     [self setupFrame];
@@ -320,6 +325,7 @@
 {
     if(_leftButton == nil) {
         UIButton *leftButton = [UIButton buttonWithType:UIButtonTypeCustom];
+        leftButton.clipsToBounds = YES;
         [self.contentView addSubview:leftButton];
         _leftButton = leftButton;
     }
@@ -330,6 +336,7 @@
 {
     if(_rightButton == nil) {
         UIButton *rightButton = [UIButton buttonWithType:UIButtonTypeCustom];
+        rightButton.clipsToBounds = YES;
         [self.contentView addSubview:rightButton];
         _rightButton = rightButton;
     }

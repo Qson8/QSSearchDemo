@@ -9,12 +9,16 @@
 #import <UIKit/UIKit.h>
 
 @interface QSSearchBarButtonItem : NSObject
-@property(nullable, nonatomic,copy)     NSString *title;       // default is nil
-@property (nonatomic, strong)           UIColor *titleColor;
-@property (nonatomic, strong)           UIFont *titlerFont;
-@property(nullable, nonatomic,copy)     UIImage *image;       // default is nil
-@property(nullable, nonatomic,strong)  __kindof UIView     *customView;       // default is nil
-@property(nullable, nonatomic)         SEL                  action;           // default is NULL
-@property(nullable, nonatomic,weak)    id                   target;           // default is nil
-@property (nonatomic, assign) UIEdgeInsets contentEdge;
+@property (nonatomic,copy)      NSString *title;       // default is nil
+@property (nonatomic, strong)   UIColor *titleColor;
+@property (nonatomic, strong)   UIFont *titlerFont;
+@property (nonatomic, strong)   UIColor *backgroundColor;
+@property (nonatomic, assign)   CGFloat cornerRadius;
+@property (nonatomic, copy)     UIImage *image;         // default is nil
+@property (nonatomic,strong)    UIView  *customView;    // default is nil
+@property (nonatomic)           SEL     action;         // default is NULL
+@property (nonatomic,weak)      id      target;         // default is nil
+
+@property (nonatomic, assign) UIEdgeInsets contentEdge;  // 内部间距 （设置左右生效，上下不生效）
+@property (nonatomic, assign) UIEdgeInsets marginEdge;  // 外部间距 （设置左右生效，上下不生效）
 @end

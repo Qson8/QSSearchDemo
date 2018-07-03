@@ -91,7 +91,7 @@
             item.action = action;
             item.titleColor = color;
             item.titlerFont = font;
-            item.contentEdge = edgeInsets;
+            item.marginEdge = edgeInsets;
             item;
         });
         

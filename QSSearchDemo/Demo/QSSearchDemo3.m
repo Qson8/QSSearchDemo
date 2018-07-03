@@ -92,7 +92,9 @@
             item.action = action;
             item.titleColor = color;
             item.titlerFont = font;
-            item.contentEdge = edgeInsets;
+            item.marginEdge = edgeInsets;
+            item.backgroundColor = [UIColor lightGrayColor];
+            item.cornerRadius = 5;
             item;
         });
         
@@ -109,7 +111,15 @@
             item.action = action;
             item.titleColor = color;
             item.titlerFont = font;
-            item.contentEdge = edgeInsets;
+            item.marginEdge = edgeInsets;
+            item.backgroundColor = [UIColor lightGrayColor];
+            item.cornerRadius = 5;
+            item;
+        });
+        
+        customSearchBar.searchBarItem = ({
+            QSSearchBarSearchItem *item = [QSSearchBarSearchItem defaultSearchBarSearchItem];
+            item.backgroundColor = [UIColor lightGrayColor];
             item;
         });
         

@@ -82,13 +82,15 @@
         UIImage *image = [UIImage imageNamed:@"goback_search"];
         id target = self;
         SEL action = @selector(popViewController);
-        UIEdgeInsets edgeInsets = UIEdgeInsetsMake(0, 15, 0, 5);
+        UIEdgeInsets marginEdgeInsets = UIEdgeInsetsMake(0, 10, 0, 0);
+        UIEdgeInsets contentEdgeInsets = UIEdgeInsetsMake(0, 10, 0, 10);
         customSearchBar.leftButtonItem = ({
             QSSearchBarButtonItem *item = [QSSearchBarButtonItem defaultSearchBarButtonItem];
             item.image = image;
             item.target = target;
             item.action = action;
-            item.contentEdge = edgeInsets;
+            item.marginEdge = marginEdgeInsets;
+            item.contentEdge = contentEdgeInsets;
             item;
         });
 
