@@ -13,6 +13,7 @@
 
 #import "QSSearchBarSearchItem+Extension.h"
 #import "QSSearchBarButtonItem+Extension.h"
+#import "UIImage+Extension.h"
 
 #ifndef QSMacro_h
 #define QSMacro_h
