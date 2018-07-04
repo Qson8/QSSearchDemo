@@ -105,11 +105,28 @@
         self.leftButton.frame = CGRectZero;
     }
     
-    x = CGRectGetMaxX(self.leftButton.frame) + _leftButtonItem.marginEdge.right + _searchBarItem.searchBarMargin;
-    w = self.contentView.width - x - _searchBarItem.searchBarMargin - self.rightButton.width - _rightButtonItem.marginEdge.right - _rightButtonItem.marginEdge.left;
+    x = CGRectGetMaxX(self.leftButton.frame) + _leftButtonItem.marginEdge.right + _searchBarItem.searchBarMarginEdge.left;
+    w = self.contentView.width - x - _searchBarItem.searchBarMarginEdge.right - self.rightButton.width - _rightButtonItem.marginEdge.right - _rightButtonItem.marginEdge.left;
     h = kSearchBarTextH;
     y = (self.contentView.height - h) * 0.5;
     self.searchBarText.frame = CGRectMake(x, y, w, h);
+    
+    [self setupSearchBarPlaceholder];
+}
+
+- (void)setupSearchBarPlaceholder
+{
+    if (_searchBarItem.placeholder.length) {
+        UIFont *font = _searchBarItem.placeholderFont;
+        
+        CGFloat w = self.searchBarText.width - CGRectGetMaxX(self.searchBarText.leftView.frame);
+        CGSize size = CGSizeMake(w, font.lineHeight);
+        [_searchBarItem.placeholder sizeWithMaxSize:size font:font color:_searchBarItem.placeholderColor lineSpaced:0 lineBreakMode:(NSLineBreakByTruncatingTail) completed:^(NSAttributedString *attributedString, CGSize size) {
+            
+            NSMutableAttributedString *stringM = [[NSMutableAttributedString alloc] initWithAttributedString:attributedString];
+            self.searchBarText.attributedPlaceholder = stringM;
+        }];
+    }
 }
 
 #pragma mark - 外部方法
@@ -124,18 +141,6 @@
     self.searchBarText.leftView = searchBarLeftBtn;
     [self.searchBarText.leftView setFrame:CGRectMake(0, 0, searchBarLeftBtn.width, searchBarLeftBtn.height)];
     self.searchBarText.leftViewMode = UITextFieldViewModeAlways;
-    
-    if (searchBarItem.placeholder.length) {
-        UIFont *font = searchBarItem.placeholderFont;
-        
-        CGFloat w = self.contentView.width - self.contentView.x - _searchBarItem.searchBarMargin - self.rightButton.width - self.searchBarText.leftView.width;
-        CGSize size = CGSizeMake(w, font.lineHeight);
-        [searchBarItem.placeholder sizeWithMaxSize:size font:font color:searchBarItem.placeholderColor lineSpaced:0 lineBreakMode:(NSLineBreakByTruncatingTail) completed:^(NSAttributedString *attributedString, CGSize size) {
-            
-            NSMutableAttributedString *stringM = [[NSMutableAttributedString alloc] initWithAttributedString:attributedString];
-            self.searchBarText.attributedPlaceholder = stringM;
-        }];
-    }
     
     self.searchBarText.text = searchBarItem.title;
     self.searchBarText.textColor = searchBarItem.titleColor;

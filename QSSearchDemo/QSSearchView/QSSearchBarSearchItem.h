@@ -26,8 +26,10 @@
 /// 搜索框左边视图
 @property (nonatomic, strong) UIImage *leftImage;
 
-/// 左右外边距 默认10
-@property (nonatomic, assign) CGFloat searchBarMargin;
+/// 搜索框外边距 (左右有效)默认10
+@property (nonatomic, assign) UIEdgeInsets searchBarMarginEdge;
+/// 放大镜内边距 (左右有效)默认10
 @property (nonatomic, assign) UIEdgeInsets leftImageViewEdge;
 
 @end
+
