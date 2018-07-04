@@ -269,9 +269,6 @@
     
     if(_searchBarItem.charType) {
         return [self shouldInputCharactersOnLimitWithString:string];
-        NSCharacterSet *cs = [[NSCharacterSet characterSetWithCharactersInString:NUM] invertedSet];
-        NSString *filtered = [[string componentsSeparatedByCharactersInSet:cs] componentsJoinedByString:@""];
-        return [string isEqualToString:filtered];
     }
     else
         return YES;
@@ -293,6 +290,13 @@
 }
 
 #pragma mark - 内部实现
+
+/**
+ 处理输入字符的限制
+
+ @param string 输入的字符
+ @return 返回该字符输入允许输入
+ */
 - (BOOL)shouldInputCharactersOnLimitWithString:(NSString *)string
 {
     NSString *typestring = nil;
@@ -318,6 +322,12 @@
 }
 
 // 限制字数
+
+/**
+ 对字符字数的限制
+
+ @param toBeString 需要处理的字符串
+ */
 -(void)setupLimits:(NSString *)toBeString
 {
     if (toBeString.length == 0) {
