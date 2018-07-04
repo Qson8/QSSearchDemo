@@ -32,5 +32,12 @@
 @property (nonatomic, assign) CGFloat topMargin;
 
 + (instancetype _Nullable )defaultSearchBar;
+
+/**
+ 传入、更新搜索框内的关键字
+
+ @param searchWord 关键字
+ */
+- (void)setSearchWord:(NSString *)searchWord;
 - (void)becomeFirstResponder;
 @end

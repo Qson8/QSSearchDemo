@@ -52,12 +52,12 @@
         QSSearchBarSearchItem *item = [QSSearchBarSearchItem defaultSearchBarSearchItem];
         item;
     });
-
+    
     self.leftButtonItem = ({
         QSSearchBarButtonItem *item = [QSSearchBarButtonItem defaultSearchBarButtonItem];
         item;
     });
-
+    
     self.rightButtonItem = ({
         QSSearchBarButtonItem *item = [QSSearchBarButtonItem defaultSearchBarButtonItem];
         item;
@@ -124,13 +124,7 @@
     self.searchBarText.leftView = searchBarLeftBtn;
     [self.searchBarText.leftView setFrame:CGRectMake(0, 0, searchBarLeftBtn.width, searchBarLeftBtn.height)];
     self.searchBarText.leftViewMode = UITextFieldViewModeAlways;
-
-    self.searchBarText.text = searchBarItem.title;
-    self.searchBarText.textColor = searchBarItem.titleColor;
-    self.searchBarText.font = searchBarItem.titlerFont;
-    self.searchBarText.layer.cornerRadius = searchBarItem.cornerRadius;
-    self.searchBarText.backgroundColor = searchBarItem.backgroundColor;
-
+    
     if (searchBarItem.placeholder.length) {
         UIFont *font = searchBarItem.placeholderFont;
         
@@ -142,6 +136,12 @@
             self.searchBarText.attributedPlaceholder = stringM;
         }];
     }
+    
+    self.searchBarText.text = searchBarItem.title;
+    self.searchBarText.textColor = searchBarItem.titleColor;
+    self.searchBarText.font = searchBarItem.titlerFont;
+    self.searchBarText.layer.cornerRadius = searchBarItem.cornerRadius;
+    self.searchBarText.backgroundColor = searchBarItem.backgroundColor;
     
     [self setupFrame];
 }
@@ -194,6 +194,12 @@
     self.lineView.backgroundColor = QSColor(239, 239, 239, 1.0);
 }
 
+- (void)setSearchWord:(NSString *)searchWord
+{
+    _searchBarItem.title = searchWord;
+    _searchBarText.text = searchWord;
+}
+
 - (void)becomeFirstResponder
 {
     [self.searchBarText becomeFirstResponder];
@@ -223,7 +229,7 @@
     }
     
     if(!_searchBarItem.lengthMax) {
-        _searchBarItem.title = textField.text;
+        [self setSearchWord:textField.text];
     }
     else {
         bool isChinese;//判断当前输入法是否是中文
@@ -258,15 +264,17 @@
     if ([string isEqualToString:@" "] || [string isEqualToString:@"\n"]) {
         return NO;
     }
-
+    
     return YES;
 }
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField
 {
+    if(!textField.text.length) return NO;
+    
     [textField endEditing:YES];
     _searchBarItem.title = textField.text;
-
+    
     if([_delegate respondsToSelector:@selector(searchBar:beginSearchWord:)]) {
         [_delegate searchBar:self beginSearchWord:_searchBarItem.title];
     }
@@ -282,12 +290,12 @@
         _searchBarItem.title = toBeString;
         return;
     }
-
+    
     //不区分中英文
     if (_searchBarItem.lengthMax > 0) {
         if (toBeString.length > _searchBarItem.lengthMax) {
-            _searchBarItem.title = [toBeString substringToIndex:_searchBarItem.lengthMax];
-            _searchBarText.text = _searchBarItem.title;
+            NSString *clipText = [toBeString substringToIndex:_searchBarItem.lengthMax];
+            [self setSearchWord:clipText];
         }
         else _searchBarItem.title = toBeString;
     }
@@ -347,7 +355,6 @@
 {
     if(_contentView == nil) {
         UIView *contentView = [[UIView alloc] init];
-        contentView.backgroundColor = [UIColor whiteColor];
         [self addSubview:contentView];
         _contentView = contentView;
     }
