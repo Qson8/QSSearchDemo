@@ -265,12 +265,16 @@
 
 - (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string
 {
+    if ([string isEqualToString:@" "] || [string isEqualToString:@"\n"]) return NO;
     
-    if ([string isEqualToString:@" "] || [string isEqualToString:@"\n"]) {
-        return NO;
+    if(_searchBarItem.charType) {
+        return [self shouldInputCharactersOnLimitWithString:string];
+        NSCharacterSet *cs = [[NSCharacterSet characterSetWithCharactersInString:NUM] invertedSet];
+        NSString *filtered = [[string componentsSeparatedByCharactersInSet:cs] componentsJoinedByString:@""];
+        return [string isEqualToString:filtered];
     }
-    
-    return YES;
+    else
+        return YES;
 }
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField
@@ -286,6 +290,31 @@
     
     QSLog(@"点击了搜索");
     return YES;
+}
+
+#pragma mark - 内部实现
+- (BOOL)shouldInputCharactersOnLimitWithString:(NSString *)string
+{
+    NSString *typestring = nil;
+    switch (_searchBarItem.charType) {
+        case QSSearchTextCharacterTypeNumber:
+            typestring = NUM;
+            break;
+        case QSSearchTextCharacterTypeAlphabet:
+            typestring = ALPHA;
+            break;
+        case QSSearchTextCharacterTypeAlphabetAndNumber:
+            typestring = ALPHANUM;
+            break;
+        default:
+            break;
+    }
+    
+    if(!typestring.length) return YES;
+    
+    NSCharacterSet *cs = [[NSCharacterSet characterSetWithCharactersInString:typestring] invertedSet];
+    NSString *filtered = [[string componentsSeparatedByCharactersInSet:cs] componentsJoinedByString:@""];
+    return [string isEqualToString:filtered];
 }
 
 // 限制字数

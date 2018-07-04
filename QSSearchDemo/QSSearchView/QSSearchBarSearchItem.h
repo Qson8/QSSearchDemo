@@ -8,6 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
+typedef NS_ENUM(NSInteger, QSSearchTextCharacterType) {
+    QSSearchTextCharacterTypeNone = 0,          // 无限制
+    QSSearchTextCharacterTypeNumber    ,        // 纯数字
+    QSSearchTextCharacterTypeAlphabet   ,       // 纯字母
+    QSSearchTextCharacterTypeAlphabetAndNumber, // 字母+数字
+};
+
 @interface QSSearchBarSearchItem : NSObject
 /// 占位文字
 @property (nonatomic, copy) NSString *placeholder;
@@ -23,6 +30,8 @@
 @property (nonatomic, assign) CGFloat cornerRadius;
 /// 支持输入的最多字符串长度
 @property (nonatomic, assign) NSInteger lengthMax;
+/// 允许输入的字符类型
+@property (nonatomic, assign) QSSearchTextCharacterType charType;
 /// 搜索框左边视图
 @property (nonatomic, strong) UIImage *leftImage;
 

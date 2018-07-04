@@ -55,8 +55,12 @@
 {
     QSLog(@"%s -- 关键字:%@",__func__,word);
     
-    self.dataArray = @[@{@"title":@"SearchDemo结果1"},
-                       @{@"title":@"SearchDemo结果2"}];
+    NSMutableArray *cellDataM = [NSMutableArray array];
+    for (int i = 0; i < 3; i++) {
+        [cellDataM addObject:@{@"title" : [NSString stringWithFormat:@"%@-%d",word,i]}];
+    }
+    
+    self.dataArray = cellDataM;
 }
 
 - (void)clearSearch:(QSSearchBar *)searchBar
@@ -120,6 +124,7 @@
         customSearchBar.searchBarItem = ({
             QSSearchBarSearchItem *item = [QSSearchBarSearchItem defaultSearchBarSearchItem];
             item.backgroundColor = [UIColor lightGrayColor];
+            item.charType = QSSearchTextCharacterTypeNumber;
             item;
         });
         
