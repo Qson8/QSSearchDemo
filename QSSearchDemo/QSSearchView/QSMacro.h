@@ -45,7 +45,7 @@
 // 状态栏默认高度
 #define kStatusBarDefHeight IS_IPHONE_X ? 44.0f : 20.0f
 // 状态栏最大高度
-#define kStatusBarMaxHeight IS_IPHONE_X ? 64.0f : 40.0f
+#define kStatusBarMaxHeight IS_IPHONE_X ? 44.0f : 40.0f
 
 #define QSColor(r,g,b,a) [UIColor colorWithRed:r/255.0 green:g/255.0 blue:b/255.0 alpha:a]
 
