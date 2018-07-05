@@ -10,8 +10,8 @@
 
 typedef NS_ENUM(NSInteger, QSSearchTextCharacterType) {
     QSSearchTextCharacterTypeNone = 0,          // 无限制
-    QSSearchTextCharacterTypeNumber    ,        // 纯数字
-    QSSearchTextCharacterTypeAlphabet   ,       // 纯字母
+    QSSearchTextCharacterTypeNumber,            // 纯数字
+    QSSearchTextCharacterTypeAlphabet,          // 纯字母
     QSSearchTextCharacterTypeAlphabetAndNumber, // 字母+数字
 };
 
@@ -27,6 +27,11 @@ typedef NS_ENUM(NSInteger, QSSearchTextCharacterType) {
 
 @property (nonatomic, strong) UIColor *backgroundColor;
 
+/// 边框宽度
+@property (nonatomic, assign) CGFloat borderWidth;
+/// 边框颜色
+@property (nonatomic, strong) UIColor *borderColor;
+/// 圆角
 @property (nonatomic, assign) CGFloat cornerRadius;
 /// 支持输入的最多字符串长度
 @property (nonatomic, assign) NSInteger lengthMax;

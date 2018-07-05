@@ -145,8 +145,10 @@
     self.searchBarText.text = searchBarItem.title;
     self.searchBarText.textColor = searchBarItem.titleColor;
     self.searchBarText.font = searchBarItem.titlerFont;
-    self.searchBarText.layer.cornerRadius = searchBarItem.cornerRadius;
     self.searchBarText.backgroundColor = searchBarItem.backgroundColor;
+    self.searchBarText.layer.cornerRadius = searchBarItem.cornerRadius;
+    self.searchBarText.layer.borderWidth = searchBarItem.borderWidth;
+    self.searchBarText.layer.borderColor = searchBarItem.borderColor.CGColor;
     
     [self setupFrame];
 }
