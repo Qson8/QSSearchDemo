@@ -204,7 +204,6 @@
 - (void)setSearchWord:(NSString *)searchWord
 {
     _searchBarItem.title = searchWord;
-    _searchBarText.text = searchWord;
 }
 
 - (void)becomeFirstResponder
@@ -216,7 +215,7 @@
 
 - (void)textFieldDidBeginEditing:(UITextField *)textField
 {
-    if ([textField isEqual:self.searchBarText]) {
+    if ([textField isEqual:_searchBarText]) {
         textField.autocorrectionType = UITextAutocorrectionTypeNo; // 取消联想
     }
 }
@@ -248,7 +247,7 @@
             isChinese = true;
         }
         
-        if(textField == self.searchBarText) {
+        if(textField == _searchBarText) {
             NSString *toBeString = textField.text;
             if (isChinese) { //中文输入法下
                 UITextRange *selectedRange = [textField markedTextRange];
@@ -267,13 +266,12 @@
 
 - (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string
 {
-    if ([string isEqualToString:@" "] || [string isEqualToString:@"\n"]) return NO;
     
-    if(_searchBarItem.charType) {
-        return [self shouldInputCharactersOnLimitWithString:string];
+    if ([string isEqualToString:@" "] || [string isEqualToString:@"\n"]) {
+        return NO;
     }
-    else
-        return YES;
+    
+    return YES;
 }
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField
@@ -291,45 +289,7 @@
     return YES;
 }
 
-#pragma mark - 内部实现
-
-/**
- 处理输入字符的限制
-
- @param string 输入的字符
- @return 返回该字符输入允许输入
- */
-- (BOOL)shouldInputCharactersOnLimitWithString:(NSString *)string
-{
-    NSString *typestring = nil;
-    switch (_searchBarItem.charType) {
-        case QSSearchTextCharacterTypeNumber:
-            typestring = NUM;
-            break;
-        case QSSearchTextCharacterTypeAlphabet:
-            typestring = ALPHA;
-            break;
-        case QSSearchTextCharacterTypeAlphabetAndNumber:
-            typestring = ALPHANUM;
-            break;
-        default:
-            break;
-    }
-    
-    if(!typestring.length) return YES;
-    
-    NSCharacterSet *cs = [[NSCharacterSet characterSetWithCharactersInString:typestring] invertedSet];
-    NSString *filtered = [[string componentsSeparatedByCharactersInSet:cs] componentsJoinedByString:@""];
-    return [string isEqualToString:filtered];
-}
-
 // 限制字数
-
-/**
- 对字符字数的限制
-
- @param toBeString 需要处理的字符串
- */
 -(void)setupLimits:(NSString *)toBeString
 {
     if (toBeString.length == 0) {
@@ -342,6 +302,7 @@
         if (toBeString.length > _searchBarItem.lengthMax) {
             NSString *clipText = [toBeString substringToIndex:_searchBarItem.lengthMax];
             [self setSearchWord:clipText];
+            _searchBarText.text = clipText;
         }
         else _searchBarItem.title = toBeString;
     }
