@@ -266,10 +266,9 @@
 
 - (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string
 {
+    if(!textField.text.length && [string isEqualToString:@" "]) return NO;
     
-    if ([string isEqualToString:@" "] || [string isEqualToString:@"\n"]) {
-        return NO;
-    }
+    if ([string isEqualToString:@"\n"]) return NO;
     
     return YES;
 }

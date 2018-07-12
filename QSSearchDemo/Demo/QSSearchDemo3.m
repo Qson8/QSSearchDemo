@@ -125,6 +125,7 @@
             QSSearchBarSearchItem *item = [QSSearchBarSearchItem defaultSearchBarSearchItem];
             item.backgroundColor = [UIColor lightGrayColor];
             item.charType = QSSearchTextCharacterTypeNumber;
+            item.lengthMax = 2;
             item;
         });
         
