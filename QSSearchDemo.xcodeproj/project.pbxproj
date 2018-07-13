@@ -18,6 +18,7 @@
 		EC5D9F5D20EB0D0500E338F3 /* QSSearchDemo5.m in Sources */ = {isa = PBXBuildFile; fileRef = EC5D9F5C20EB0D0500E338F3 /* QSSearchDemo5.m */; };
 		EC5DA04120EB438B00E338F3 /* UIImage+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = EC5DA04020EB438B00E338F3 /* UIImage+Extension.m */; };
 		EC5DA04320EB444E00E338F3 /* QSSearchView.bundle in Resources */ = {isa = PBXBuildFile; fileRef = EC5DA04220EB444E00E338F3 /* QSSearchView.bundle */; };
+		EC739B9E20F8AC6600D81728 /* QSSearchDemo6.m in Sources */ = {isa = PBXBuildFile; fileRef = EC739B9D20F8AC6600D81728 /* QSSearchDemo6.m */; };
 		ECF8BC6B20B53D8D000F009B /* QSSearchDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = ECF8BC6A20B53D8D000F009B /* QSSearchDemoTests.m */; };
 		ECF8BC7620B53D8D000F009B /* QSSearchDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = ECF8BC7520B53D8D000F009B /* QSSearchDemoUITests.m */; };
 		ECF8BC8D20B53E42000F009B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ECF8BC8520B53E42000F009B /* Assets.xcassets */; };
@@ -72,6 +73,8 @@
 		EC5DA03F20EB438B00E338F3 /* UIImage+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Extension.h"; sourceTree = "<group>"; };
 		EC5DA04020EB438B00E338F3 /* UIImage+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Extension.m"; sourceTree = "<group>"; };
 		EC5DA04220EB444E00E338F3 /* QSSearchView.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = QSSearchView.bundle; sourceTree = "<group>"; };
+		EC739B9C20F8AC6600D81728 /* QSSearchDemo6.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QSSearchDemo6.h; sourceTree = "<group>"; };
+		EC739B9D20F8AC6600D81728 /* QSSearchDemo6.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QSSearchDemo6.m; sourceTree = "<group>"; };
 		ECF8BC4E20B53D8D000F009B /* QSSearchDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QSSearchDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ECF8BC6620B53D8D000F009B /* QSSearchDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QSSearchDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		ECF8BC6A20B53D8D000F009B /* QSSearchDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QSSearchDemoTests.m; sourceTree = "<group>"; };
@@ -203,6 +206,8 @@
 				EC5D9F5520EB09A200E338F3 /* QSSearchDemo4.m */,
 				EC5D9F5B20EB0D0500E338F3 /* QSSearchDemo5.h */,
 				EC5D9F5C20EB0D0500E338F3 /* QSSearchDemo5.m */,
+				EC739B9C20F8AC6600D81728 /* QSSearchDemo6.h */,
+				EC739B9D20F8AC6600D81728 /* QSSearchDemo6.m */,
 			);
 			path = Demo;
 			sourceTree = "<group>";
@@ -379,6 +384,7 @@
 				EC5D9F5020EB06DD00E338F3 /* QSSearchBarButtonItem+Extension.m in Sources */,
 				EC5D9F5D20EB0D0500E338F3 /* QSSearchDemo5.m in Sources */,
 				ECF8BCA220B54A32000F009B /* UIView+Extension.m in Sources */,
+				EC739B9E20F8AC6600D81728 /* QSSearchDemo6.m in Sources */,
 				EC5D9F4120EA0F7300E338F3 /* QSSearchBar.m in Sources */,
 				EC5D9F4A20EA71CF00E338F3 /* QSSearchBarSearchItem.m in Sources */,
 				ECF8BCB620B69229000F009B /* QSBaseViewController.m in Sources */,
@@ -549,7 +555,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = BT726ND66X;
+				DEVELOPMENT_TEAM = BB535CKPZQ;
 				INFOPLIST_FILE = "$(SRCROOT)/QSSearchDemo/System/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -564,7 +570,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = BT726ND66X;
+				DEVELOPMENT_TEAM = BB535CKPZQ;
 				INFOPLIST_FILE = "$(SRCROOT)/QSSearchDemo/System/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

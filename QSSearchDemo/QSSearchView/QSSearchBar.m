@@ -150,6 +150,12 @@
     self.searchBarText.layer.borderWidth = searchBarItem.borderWidth;
     self.searchBarText.layer.borderColor = searchBarItem.borderColor.CGColor;
     
+    if(searchBarItem.target && searchBarItem.action) {
+        [self.searchBarText endEditing:YES];
+        UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:searchBarItem.target action:searchBarItem.action];
+        [self.searchBarText addGestureRecognizer:tap];
+    }
+    
     [self setupFrame];
 }
 

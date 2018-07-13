@@ -45,5 +45,9 @@ typedef NS_ENUM(NSInteger, QSSearchTextCharacterType) {
 /// 放大镜内边距 (左右有效)默认10
 @property (nonatomic, assign) UIEdgeInsets leftImageViewEdge;
 
+/// 搜索框的点击事件(搜索框不输入，只提供事件接受)
+@property (nonatomic)           SEL     action;         // default is NULL
+@property (nonatomic,weak)      id      target;         // default is nil
+
 @end
 
