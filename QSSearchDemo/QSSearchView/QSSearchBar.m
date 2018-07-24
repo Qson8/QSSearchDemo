@@ -47,6 +47,7 @@
 - (void)initData
 {
     _topMargin = kStatusBarHeight;
+    _lineColor = QSColor(239, 239, 239, 1.0);
     
     self.searchBarItem = ({
         QSSearchBarSearchItem *item = [QSSearchBarSearchItem defaultSearchBarSearchItem];
@@ -62,21 +63,22 @@
         QSSearchBarButtonItem *item = [QSSearchBarButtonItem defaultSearchBarButtonItem];
         item;
     });
-    
-    self.lineColor = QSColor(239, 239, 239, 1.0);
 }
 
 - (void)setupFrame
 {
     CGFloat x = 0,y = 0,w = 0,h = 0;
-    h = _topMargin + kSearchBarH;
+    CGFloat searchViewHeight = _searchBarItem.searchBarMarginEdge.top + _searchBarItem.searchContentHeight + _searchBarItem.searchBarMarginEdge.bottom;
+    h = _topMargin + searchViewHeight;
     w = kScreenWidth;
     self.frame = CGRectMake(self.x, self.y, w, h);
     
     y = _topMargin;
     w = kScreenWidth;
-    h = kSearchBarH;
+    h = searchViewHeight;
     self.contentView.frame = CGRectMake(x, y, w, h);
+    
+    self.searchBarText.y = _searchBarItem.searchBarMarginEdge.top;
     
     y = self.contentView.height - 1;
     w = kScreenWidth;
@@ -85,9 +87,9 @@
     
     if(_rightButtonItem.title.length || _rightButtonItem.image) {
         w = self.rightButton.width;
-        h = kSearchBarTextH;
+        h = _searchBarItem.searchContentHeight;
         x = kScreenWidth - w  - _rightButtonItem.marginEdge.right;
-        y = (kSearchBarH * 0.5 - h * 0.5);
+        y = (searchViewHeight * 0.5 - h * 0.5);
         self.rightButton.frame = CGRectMake(x, y, w, h);
     }
     else {
@@ -96,9 +98,9 @@
     
     if(_leftButtonItem.title.length || _leftButtonItem.image) {
         w = self.leftButton.width;
-        h = kSearchBarTextH;
+        h = _searchBarItem.searchContentHeight;
         x = _leftButtonItem.marginEdge.left;
-        y = (kSearchBarH * 0.5 - h * 0.5);
+        y = (searchViewHeight * 0.5 - h * 0.5);
         self.leftButton.frame = CGRectMake(x, y, w, h);
     }
     else {
@@ -107,9 +109,8 @@
     
     x = CGRectGetMaxX(self.leftButton.frame) + _leftButtonItem.marginEdge.right + _searchBarItem.searchBarMarginEdge.left;
     w = self.contentView.width - x - _searchBarItem.searchBarMarginEdge.right - self.rightButton.width - _rightButtonItem.marginEdge.right - _rightButtonItem.marginEdge.left;
-    h = kSearchBarTextH;
-    y = (self.contentView.height - h) * 0.5;
-    self.searchBarText.frame = CGRectMake(x, y, w, h);
+    h = _searchBarItem.searchContentHeight;
+    self.searchBarText.frame = CGRectMake(x, _searchBarText.y, w, h);
     
     [self setupSearchBarPlaceholder];
 }
@@ -268,6 +269,10 @@
             }
         }
     }
+    
+    if([_delegate respondsToSelector:@selector(searchBar:textDidChange:)]) {
+        [_delegate searchBar:self textDidChange:_searchBarText.text];
+    }
 }
 
 - (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string
@@ -374,3 +379,4 @@
 }
 
 @end
+

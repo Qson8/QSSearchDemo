@@ -15,6 +15,8 @@
 - (void)searchBar:(QSSearchBar *_Nonnull)searchBar beginSearchWord:(NSString *_Nonnull)word;
 /// 清空搜索内容
 - (void)clearSearch:(QSSearchBar *_Nullable)searchBar;
+/// 搜索框文字发生变化时调用
+- (void)searchBar:(QSSearchBar *_Nullable)searchBar textDidChange:(NSString *)searchText;
 @end
 
 @interface QSSearchBar : UIView

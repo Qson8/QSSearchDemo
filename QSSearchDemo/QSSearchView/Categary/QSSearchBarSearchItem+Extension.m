@@ -23,8 +23,9 @@
     UIFont *placeholderFont = [UIFont systemFontOfSize:14];
     CGFloat cornerRadius = 5.0;
     UIColor *backgroundColor = QSColor(239, 239, 239, 1.0);
-    UIEdgeInsets leftImageViewEdge = UIEdgeInsetsMake(0, 5, 0, 5);
-    UIEdgeInsets searchBarMarginEdge = UIEdgeInsetsMake(0, 10, 0, 10);
+    UIEdgeInsets leftImageViewEdge = UIEdgeInsetsMake(0, 7, 0, 5);
+    UIEdgeInsets searchBarMarginEdge = UIEdgeInsetsMake((kSearchBarH - kSearchBarTextH) * 0.5, 10, (kSearchBarH - kSearchBarTextH) * 0.5, 10);
+    CGFloat searchContentHeight = kSearchBarTextH;
     
     return  ({
         QSSearchBarSearchItem *item = [[QSSearchBarSearchItem alloc] init];
@@ -40,6 +41,7 @@
         item.backgroundColor = backgroundColor;
         item.leftImageViewEdge = leftImageViewEdge;
         item.searchBarMarginEdge = searchBarMarginEdge;
+        item.searchContentHeight = searchContentHeight;
         item;
     });
 }

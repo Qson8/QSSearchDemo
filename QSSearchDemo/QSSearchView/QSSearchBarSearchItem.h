@@ -42,12 +42,15 @@ typedef NS_ENUM(NSInteger, QSSearchTextCharacterType) {
 
 /// 搜索框外边距 (左右有效)默认10
 @property (nonatomic, assign) UIEdgeInsets searchBarMarginEdge;
+@property (nonatomic, assign) CGFloat searchContentHeight;
+
 /// 放大镜内边距 (左右有效)默认10
 @property (nonatomic, assign) UIEdgeInsets leftImageViewEdge;
 
-/// 搜索框的点击事件(搜索框不输入，只提供事件接受)
+/// 搜索框的点击事件(默认为空，及允许输入，如果有值，即搜索框不输入，只接受事件)
 @property (nonatomic)           SEL     action;         // default is NULL
 @property (nonatomic,weak)      id      target;         // default is nil
 
 @end
+
 
