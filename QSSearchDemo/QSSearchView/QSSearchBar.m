@@ -211,6 +211,8 @@
 - (void)setSearchWord:(NSString *)searchWord
 {
     _searchBarItem.title = searchWord;
+    
+    self.searchBarItem = _searchBarItem;
 }
 
 - (void)becomeFirstResponder
@@ -242,7 +244,7 @@
     }
     
     if(!_searchBarItem.lengthMax) {
-        [self setSearchWord:textField.text];
+        _searchBarItem.title = textField.text;
     }
     else {
         bool isChinese;//判断当前输入法是否是中文
@@ -311,7 +313,7 @@
     if (_searchBarItem.lengthMax > 0) {
         if (toBeString.length > _searchBarItem.lengthMax) {
             NSString *clipText = [toBeString substringToIndex:_searchBarItem.lengthMax];
-            [self setSearchWord:clipText];
+            _searchBarItem.title = clipText;
             _searchBarText.text = clipText;
         }
         else _searchBarItem.title = toBeString;

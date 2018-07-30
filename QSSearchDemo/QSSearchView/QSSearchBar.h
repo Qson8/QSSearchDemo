@@ -37,7 +37,7 @@
 
 /**
  传入、更新搜索框内的关键字
-
+ @warning 内部会给模型模型，以及设置界面显示，只能外界调用，切忌不可在textFieldDidChange或UITextField代理方法内调用它，否则会出现输入字符错乱问题
  @param searchWord 关键字
  */
 - (void)setSearchWord:(NSString *)searchWord;
