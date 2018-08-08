@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EC132B4E211AF0C8006EBB6B /* UIButton+ImageTitleSpacing.m in Sources */ = {isa = PBXBuildFile; fileRef = EC132B4C211AF0C8006EBB6B /* UIButton+ImageTitleSpacing.m */; };
+		EC132B54211AF2C4006EBB6B /* QSSearchDemo7.m in Sources */ = {isa = PBXBuildFile; fileRef = EC132B53211AF2C4006EBB6B /* QSSearchDemo7.m */; };
 		EC5D9F4120EA0F7300E338F3 /* QSSearchBar.m in Sources */ = {isa = PBXBuildFile; fileRef = EC5D9F3F20EA0F7300E338F3 /* QSSearchBar.m */; };
 		EC5D9F4420EA151100E338F3 /* QSSearchDemo2.m in Sources */ = {isa = PBXBuildFile; fileRef = EC5D9F4320EA151100E338F3 /* QSSearchDemo2.m */; };
 		EC5D9F4720EA6DB200E338F3 /* QSSearchBarButtonItem.m in Sources */ = {isa = PBXBuildFile; fileRef = EC5D9F4620EA6DB200E338F3 /* QSSearchBarButtonItem.m */; };
@@ -52,6 +54,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		EC132B4C211AF0C8006EBB6B /* UIButton+ImageTitleSpacing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+ImageTitleSpacing.m"; sourceTree = "<group>"; };
+		EC132B4D211AF0C8006EBB6B /* UIButton+ImageTitleSpacing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+ImageTitleSpacing.h"; sourceTree = "<group>"; };
+		EC132B52211AF2C4006EBB6B /* QSSearchDemo7.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QSSearchDemo7.h; sourceTree = "<group>"; };
+		EC132B53211AF2C4006EBB6B /* QSSearchDemo7.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QSSearchDemo7.m; sourceTree = "<group>"; };
 		EC5D9F3F20EA0F7300E338F3 /* QSSearchBar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QSSearchBar.m; sourceTree = "<group>"; };
 		EC5D9F4020EA0F7300E338F3 /* QSSearchBar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QSSearchBar.h; sourceTree = "<group>"; };
 		EC5D9F4220EA151100E338F3 /* QSSearchDemo2.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QSSearchDemo2.h; sourceTree = "<group>"; };
@@ -208,6 +214,8 @@
 				EC5D9F5C20EB0D0500E338F3 /* QSSearchDemo5.m */,
 				EC739B9C20F8AC6600D81728 /* QSSearchDemo6.h */,
 				EC739B9D20F8AC6600D81728 /* QSSearchDemo6.m */,
+				EC132B52211AF2C4006EBB6B /* QSSearchDemo7.h */,
+				EC132B53211AF2C4006EBB6B /* QSSearchDemo7.m */,
 			);
 			path = Demo;
 			sourceTree = "<group>";
@@ -231,6 +239,8 @@
 		ECF8BC9C20B5471E000F009B /* Categary */ = {
 			isa = PBXGroup;
 			children = (
+				EC132B4D211AF0C8006EBB6B /* UIButton+ImageTitleSpacing.h */,
+				EC132B4C211AF0C8006EBB6B /* UIButton+ImageTitleSpacing.m */,
 				ECF8BCB120B68A7F000F009B /* UINavigationController+FDFullscreenPopGesture.h */,
 				ECF8BCB220B68A7F000F009B /* UINavigationController+FDFullscreenPopGesture.m */,
 				ECF8BCA020B54A32000F009B /* UIView+Extension.h */,
@@ -399,6 +409,8 @@
 				EC5D9F5620EB09A200E338F3 /* QSSearchDemo4.m in Sources */,
 				EC5DA04120EB438B00E338F3 /* UIImage+Extension.m in Sources */,
 				ECF8BCAB20B54EFB000F009B /* NSString+AttributedString.m in Sources */,
+				EC132B54211AF2C4006EBB6B /* QSSearchDemo7.m in Sources */,
+				EC132B4E211AF0C8006EBB6B /* UIButton+ImageTitleSpacing.m in Sources */,
 				ECF8BCB020B68922000F009B /* QSSearchDemo1.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

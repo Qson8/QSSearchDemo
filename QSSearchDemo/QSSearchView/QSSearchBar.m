@@ -86,7 +86,7 @@
     self.lineView.frame = CGRectMake(x, y, w, h);
     
     if(_rightButtonItem.title.length || _rightButtonItem.image) {
-        w = self.rightButton.width;
+        w = self.rightButton.width + _rightButtonItem.imageTitleSpace;
         h = _searchBarItem.searchContentHeight;
         x = kScreenWidth - w  - _rightButtonItem.marginEdge.right;
         y = (searchViewHeight * 0.5 - h * 0.5);
@@ -97,7 +97,7 @@
     }
     
     if(_leftButtonItem.title.length || _leftButtonItem.image) {
-        w = self.leftButton.width;
+        w = self.leftButton.width + _leftButtonItem.imageTitleSpace;
         h = _searchBarItem.searchContentHeight;
         x = _leftButtonItem.marginEdge.left;
         y = (searchViewHeight * 0.5 - h * 0.5);
@@ -173,6 +173,8 @@
     [self.leftButton setBackgroundColor:leftButtonItem.backgroundColor];
     self.leftButton.layer.cornerRadius = leftButtonItem.cornerRadius;
     
+    [self.leftButton layoutButtonWithEdgeInsetsStyle:leftButtonItem.style imageTitleSpace:leftButtonItem.imageTitleSpace];
+    
     [self.leftButton sizeToFit];
     [self setupFrame];
 }
@@ -189,6 +191,8 @@
     [self.rightButton addTarget:rightButtonItem.target action:rightButtonItem.action forControlEvents:(UIControlEventTouchUpInside)];
     [self.rightButton setBackgroundColor:rightButtonItem.backgroundColor];
     self.rightButton.layer.cornerRadius = rightButtonItem.cornerRadius;
+    
+    [self.rightButton layoutButtonWithEdgeInsetsStyle:rightButtonItem.style imageTitleSpace:rightButtonItem.imageTitleSpace];
     
     [self.rightButton sizeToFit];
     [self setupFrame];

@@ -14,6 +14,7 @@
 #import "QSSearchDemo4.h"
 #import "QSSearchDemo5.h"
 #import "QSSearchDemo6.h"
+#import "QSSearchDemo7.h"
 
 @interface ViewController ()
 @end
@@ -34,7 +35,8 @@
                        @{@"title":@"SearchDemo3"},
                        @{@"title":@"SearchDemo4"},
                        @{@"title":@"SearchDemo5"},
-                       @{@"title":@"SearchDemo6"}];
+                       @{@"title":@"SearchDemo6"},
+                       @{@"title":@"SearchDemo7"}];
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -81,6 +83,11 @@
     [self.navigationController pushViewController:vc animated:YES];
 }
 
+- (void)pushQSSearchDemo7
+{
+    QSSearchDemo7 *vc = [[QSSearchDemo7 alloc] init];
+    [self.navigationController pushViewController:vc animated:YES];
+}
 
 #pragma mark - UITableViewDelegate
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
@@ -104,6 +111,9 @@
             break;
         case 5:
             [self pushQSSearchDemo6];
+            break;
+        case 6:
+            [self pushQSSearchDemo7];
             break;
         default:
             break;
