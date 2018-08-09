@@ -86,7 +86,7 @@
     self.lineView.frame = CGRectMake(x, y, w, h);
     
     if(_rightButtonItem.title.length || _rightButtonItem.image) {
-        w = self.rightButton.width + _rightButtonItem.imageTitleSpace;
+        w = self.rightButton.width;
         h = _searchBarItem.searchContentHeight;
         x = kScreenWidth - w  - _rightButtonItem.marginEdge.right;
         y = (searchViewHeight * 0.5 - h * 0.5);
@@ -97,7 +97,7 @@
     }
     
     if(_leftButtonItem.title.length || _leftButtonItem.image) {
-        w = self.leftButton.width + _leftButtonItem.imageTitleSpace;
+        w = self.leftButton.width;
         h = _searchBarItem.searchContentHeight;
         x = _leftButtonItem.marginEdge.left;
         y = (searchViewHeight * 0.5 - h * 0.5);
@@ -168,6 +168,7 @@
     [self.leftButton setTitleColor:leftButtonItem.titleColor forState:UIControlStateNormal];
     self.leftButton.titleLabel.font = leftButtonItem.titlerFont;
     [self.leftButton setImage:leftButtonItem.image forState:UIControlStateNormal];
+    [self.leftButton setImage:leftButtonItem.focusImage forState:UIControlStateHighlighted];
     [self.leftButton setContentEdgeInsets:leftButtonItem.contentEdge];
     [self.leftButton addTarget:leftButtonItem.target action:leftButtonItem.action forControlEvents:(UIControlEventTouchUpInside)];
     [self.leftButton setBackgroundColor:leftButtonItem.backgroundColor];
@@ -175,7 +176,12 @@
     
     [self.leftButton layoutButtonWithEdgeInsetsStyle:leftButtonItem.style imageTitleSpace:leftButtonItem.imageTitleSpace];
     
+    
     [self.leftButton sizeToFit];
+    if(leftButtonItem.style == QSButtonEdgeInsetsStyleLeft ||
+       leftButtonItem.style == QSButtonEdgeInsetsStyleRight){
+        self.leftButton.width += self.leftButtonItem.imageTitleSpace;
+    }
     [self setupFrame];
 }
 
@@ -187,6 +193,7 @@
     self.rightButton.titleLabel.font = rightButtonItem.titlerFont;
     [self.rightButton setTitleColor:rightButtonItem.titleColor forState:UIControlStateNormal];
     [self.rightButton setImage:rightButtonItem.image forState:UIControlStateNormal];
+    [self.rightButton setImage:rightButtonItem.focusImage forState:UIControlStateHighlighted];
     [self.rightButton setContentEdgeInsets:rightButtonItem.contentEdge];
     [self.rightButton addTarget:rightButtonItem.target action:rightButtonItem.action forControlEvents:(UIControlEventTouchUpInside)];
     [self.rightButton setBackgroundColor:rightButtonItem.backgroundColor];
@@ -195,6 +202,11 @@
     [self.rightButton layoutButtonWithEdgeInsetsStyle:rightButtonItem.style imageTitleSpace:rightButtonItem.imageTitleSpace];
     
     [self.rightButton sizeToFit];
+    [self.leftButton sizeToFit];
+    if(rightButtonItem.style == QSButtonEdgeInsetsStyleLeft ||
+       rightButtonItem.style == QSButtonEdgeInsetsStyleRight){
+        self.rightButton.width += self.rightButtonItem.imageTitleSpace;
+    }
     [self setupFrame];
 }
 

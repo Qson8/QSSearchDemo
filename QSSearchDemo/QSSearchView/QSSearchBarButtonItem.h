@@ -15,7 +15,8 @@
 @property (nonatomic, strong)   UIFont *titlerFont;
 @property (nonatomic, strong)   UIColor *backgroundColor;
 @property (nonatomic, assign)   CGFloat cornerRadius;
-@property (nonatomic, copy)     UIImage *image;         // default is nil
+@property (nonatomic, copy)     UIImage *image;         // default is nil， UIControlStateNormal状态下的图片
+@property (nonatomic, copy)     UIImage *focusImage;    // default is nil， UIControlStateHighlighted状态下的图片
 @property (nonatomic,strong)    UIView  *customView;    // default is nil
 @property (nonatomic)           SEL     action;         // default is NULL
 @property (nonatomic,weak)      id      target;         // default is nil

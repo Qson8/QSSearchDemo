@@ -84,6 +84,7 @@
         searchBar.rightButtonItem = ({
             QSSearchBarButtonItem *item = [QSSearchBarButtonItem defaultSearchBarButtonItem];
             item.image = [UIImage imageWithImageName:@"mirror_search"];
+            item.focusImage = [UIImage imageWithImageName:@"mirror_search"];
             item.title = @"发布";
             item.titlerFont = [UIFont systemFontOfSize:10];
             item.titleColor = [UIColor whiteColor];
@@ -96,7 +97,8 @@
         edge = UIEdgeInsetsMake(0, 19, 0, 18);
         searchBar.leftButtonItem = ({
             QSSearchBarButtonItem *item = [QSSearchBarButtonItem defaultSearchBarButtonItem];
-            item.image = [UIImage imageWithImageName:@"mirror_search"];;
+            item.image = [UIImage imageWithImageName:@"mirror_search"];
+            item.focusImage = [UIImage imageWithImageName:@"mirror_search"];
             item.title = @"未登录";
             item.titlerFont = [UIFont systemFontOfSize:10];
             item.titleColor = [UIColor whiteColor];
