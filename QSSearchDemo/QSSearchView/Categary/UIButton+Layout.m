@@ -1,16 +1,19 @@
 //
-//  UIButton+ImageTitleSpacing.m
+//  UIButton+Layout.m
 //  QSSearchDemo
 //
 //  Created by Qson on 2018/5/23.
 //  Copyright © 2018年 Qson. All rights reserved.
 //
 
-#import "UIButton+ImageTitleSpacing.h"
+#import "UIButton+Layout.h"
 
-@implementation UIButton (ImageTitleSpacing)
+@implementation UIButton (Layout)
 - (void)layoutButtonWithEdgeInsetsStyle:(QSButtonEdgeInsetsStyle)style
                         imageTitleSpace:(CGFloat)space {
+    
+    if(style == QSButtonEdgeInsetsStyleDefault) return;
+    
     /**
      *  知识点：titleEdgeInsets是title相对于其上下左右的inset，跟tableView的contentInset是类似的，
      *  如果只有title，那它上下左右都是相对于button的，image也是一样；

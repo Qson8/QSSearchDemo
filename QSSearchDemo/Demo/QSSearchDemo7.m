@@ -91,6 +91,8 @@
             item.contentEdge = edge;
             item.target = self;
             item.action = @selector(didClickRightBtn);
+            
+            item.style = QSButtonEdgeInsetsStyleTop;
             item;
         });
         
@@ -105,6 +107,8 @@
             item.contentEdge = edge;
             item.target = self;
             item.action = @selector(didClickLeftBtn);
+            
+            item.style = QSButtonEdgeInsetsStyleDefault;
             item;
         });
         

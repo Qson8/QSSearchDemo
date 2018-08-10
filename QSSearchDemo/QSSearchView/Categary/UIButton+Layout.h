@@ -1,5 +1,5 @@
 //
-//  UIButton+ImageTitleSpacing.h
+//  UIButton+Layout.h
 //  QSSearchDemo
 //
 //  Created by Qson on 2018/5/23.
@@ -10,6 +10,7 @@
 
 // 定义一个枚举（包含了四种类型的button）
 typedef NS_ENUM(NSUInteger, QSButtonEdgeInsetsStyle) {
+    QSButtonEdgeInsetsStyleDefault = 0, // 默认
     QSButtonEdgeInsetsStyleTop, // image在上，label在下
     QSButtonEdgeInsetsStyleLeft, // image在左，label在右
     QSButtonEdgeInsetsStyleBottom, // image在下，label在上
@@ -17,7 +18,7 @@ typedef NS_ENUM(NSUInteger, QSButtonEdgeInsetsStyle) {
 };
 
 
-@interface UIButton (ImageTitleSpacing)
+@interface UIButton (Layout)
 
 
 /**

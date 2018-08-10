@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "UIButton+ImageTitleSpacing.h"
+#import "UIButton+Layout.h"
 
 @interface QSSearchBarButtonItem : NSObject
 @property (nonatomic,copy)      NSString *title;       // default is nil
