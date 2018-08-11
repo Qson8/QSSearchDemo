@@ -19,6 +19,8 @@
 
 @property (nonatomic, weak) UIButton *leftButton;
 @property (nonatomic, weak) UIButton *rightButton;
+/// 用来阻止UITextField响应，接口点按事件的
+@property (nonatomic, weak) UIButton *textTouchButton;
 
 @end
 
@@ -111,6 +113,7 @@
     w = self.contentView.width - x - _searchBarItem.searchBarMarginEdge.right - self.rightButton.width - _rightButtonItem.marginEdge.right - _rightButtonItem.marginEdge.left;
     h = _searchBarItem.searchContentHeight;
     self.searchBarText.frame = CGRectMake(x, _searchBarText.y, w, h);
+    _textTouchButton.frame = self.searchBarText.bounds;
     
     [self setupSearchBarPlaceholder];
 }
@@ -153,8 +156,9 @@
     
     if(searchBarItem.target && searchBarItem.action) {
         [self.searchBarText endEditing:YES];
-        UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:searchBarItem.target action:searchBarItem.action];
-        [self.searchBarText addGestureRecognizer:tap];
+        
+        self.textTouchButton.hidden = NO;
+        [self.textTouchButton addTarget:searchBarItem.target action:searchBarItem.action forControlEvents:UIControlEventTouchUpInside];
     }
     
     [self setupFrame];
@@ -352,6 +356,17 @@
         _searchBarText = searchBarText;
     }
     return _searchBarText;
+}
+
+- (UIButton *)textTouchButton
+{
+    if(_textTouchButton == nil) {
+        UIButton *touchButton = [UIButton buttonWithType:UIButtonTypeCustom];
+        touchButton.hidden = YES;
+        [self.searchBarText addSubview:touchButton];
+        _textTouchButton = touchButton;
+    }
+    return _textTouchButton;
 }
 
 - (UIView *)lineView
