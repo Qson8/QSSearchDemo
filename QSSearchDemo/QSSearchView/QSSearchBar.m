@@ -154,6 +154,8 @@
     self.searchBarText.layer.borderWidth = searchBarItem.borderWidth;
     self.searchBarText.layer.borderColor = searchBarItem.borderColor.CGColor;
     
+    self.searchBarText.enablesReturnKeyAutomatically = searchBarItem.enablesReturnKeyAutomatically;
+    
     if(searchBarItem.target && searchBarItem.action) {
         [self.searchBarText endEditing:YES];
         
@@ -348,7 +350,6 @@
         searchBarText.borderStyle = UITextBorderStyleNone;
         searchBarText.delegate = self;
         searchBarText.clearButtonMode = UITextFieldViewModeWhileEditing;
-        searchBarText.enablesReturnKeyAutomatically = YES; // 无内容时变灰不能点
         searchBarText.returnKeyType = UIReturnKeySearch;
         [searchBarText addTarget:self action:@selector(textFieldDidChange:) forControlEvents:UIControlEventEditingChanged];
         [self.contentView addSubview:searchBarText];

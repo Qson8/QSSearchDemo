@@ -25,6 +25,9 @@ typedef NS_ENUM(NSInteger, QSSearchTextCharacterType) {
 @property (nonatomic, strong) UIColor *titleColor;
 @property (nonatomic, strong) UIFont *titlerFont;
 
+/// 默认为YES,如果设置为Yes,文本框中没有输入任何字符的话，右下角的返回按钮是disabled的。
+@property (nonatomic, assign) BOOL enablesReturnKeyAutomatically;
+
 @property (nonatomic, strong) UIColor *backgroundColor;
 
 /// 边框宽度

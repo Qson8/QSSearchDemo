@@ -42,6 +42,7 @@
         item.leftImageViewEdge = leftImageViewEdge;
         item.searchBarMarginEdge = searchBarMarginEdge;
         item.searchContentHeight = searchContentHeight;
+        item.enablesReturnKeyAutomatically = YES;
         item;
     });
 }
