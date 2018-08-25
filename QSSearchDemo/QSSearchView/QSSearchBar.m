@@ -227,7 +227,7 @@
 {
     _lineColor = lineColor;
     
-    self.lineView.backgroundColor = QSColor(239, 239, 239, 1.0);
+    self.lineView.backgroundColor = lineColor;
 }
 
 - (void)setSearchWord:(NSString *)searchWord
