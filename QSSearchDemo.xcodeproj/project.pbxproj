@@ -21,6 +21,7 @@
 		EC5DA04120EB438B00E338F3 /* UIImage+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = EC5DA04020EB438B00E338F3 /* UIImage+Extension.m */; };
 		EC5DA04320EB444E00E338F3 /* QSSearchView.bundle in Resources */ = {isa = PBXBuildFile; fileRef = EC5DA04220EB444E00E338F3 /* QSSearchView.bundle */; };
 		EC739B9E20F8AC6600D81728 /* QSSearchDemo6.m in Sources */ = {isa = PBXBuildFile; fileRef = EC739B9D20F8AC6600D81728 /* QSSearchDemo6.m */; };
+		ECAE965D214F95D000AECF3D /* QSSearchDemo8.m in Sources */ = {isa = PBXBuildFile; fileRef = ECAE965C214F95D000AECF3D /* QSSearchDemo8.m */; };
 		ECF8BC6B20B53D8D000F009B /* QSSearchDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = ECF8BC6A20B53D8D000F009B /* QSSearchDemoTests.m */; };
 		ECF8BC7620B53D8D000F009B /* QSSearchDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = ECF8BC7520B53D8D000F009B /* QSSearchDemoUITests.m */; };
 		ECF8BC8D20B53E42000F009B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ECF8BC8520B53E42000F009B /* Assets.xcassets */; };
@@ -81,6 +82,8 @@
 		EC5DA04220EB444E00E338F3 /* QSSearchView.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = QSSearchView.bundle; sourceTree = "<group>"; };
 		EC739B9C20F8AC6600D81728 /* QSSearchDemo6.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QSSearchDemo6.h; sourceTree = "<group>"; };
 		EC739B9D20F8AC6600D81728 /* QSSearchDemo6.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QSSearchDemo6.m; sourceTree = "<group>"; };
+		ECAE965B214F95D000AECF3D /* QSSearchDemo8.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QSSearchDemo8.h; sourceTree = "<group>"; };
+		ECAE965C214F95D000AECF3D /* QSSearchDemo8.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QSSearchDemo8.m; sourceTree = "<group>"; };
 		ECF8BC4E20B53D8D000F009B /* QSSearchDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QSSearchDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ECF8BC6620B53D8D000F009B /* QSSearchDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QSSearchDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		ECF8BC6A20B53D8D000F009B /* QSSearchDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QSSearchDemoTests.m; sourceTree = "<group>"; };
@@ -216,6 +219,8 @@
 				EC739B9D20F8AC6600D81728 /* QSSearchDemo6.m */,
 				EC132B52211AF2C4006EBB6B /* QSSearchDemo7.h */,
 				EC132B53211AF2C4006EBB6B /* QSSearchDemo7.m */,
+				ECAE965B214F95D000AECF3D /* QSSearchDemo8.h */,
+				ECAE965C214F95D000AECF3D /* QSSearchDemo8.m */,
 			);
 			path = Demo;
 			sourceTree = "<group>";
@@ -408,6 +413,7 @@
 				EC5D9F4D20EAFE3800E338F3 /* QSSearchDemo3.m in Sources */,
 				EC5D9F5620EB09A200E338F3 /* QSSearchDemo4.m in Sources */,
 				EC5DA04120EB438B00E338F3 /* UIImage+Extension.m in Sources */,
+				ECAE965D214F95D000AECF3D /* QSSearchDemo8.m in Sources */,
 				ECF8BCAB20B54EFB000F009B /* NSString+AttributedString.m in Sources */,
 				EC132B54211AF2C4006EBB6B /* QSSearchDemo7.m in Sources */,
 				EC132B4E211AF0C8006EBB6B /* UIButton+Layout.m in Sources */,

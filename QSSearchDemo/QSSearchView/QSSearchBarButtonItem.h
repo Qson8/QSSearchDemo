@@ -10,16 +10,17 @@
 #import "UIButton+Layout.h"
 
 @interface QSSearchBarButtonItem : NSObject
-@property (nonatomic,copy)      NSString *title;       // default is nil
-@property (nonatomic, strong)   UIColor *titleColor;
-@property (nonatomic, strong)   UIFont *titlerFont;
-@property (nonatomic, strong)   UIColor *backgroundColor;
+@property (nonatomic,strong, nullable)    UIView  *customView;    // default is nil 有值，其他属性失效
+
+@property (nonatomic,copy,nullable)      NSString *title;       // default is nil
+@property (nonatomic, strong,nullable)   UIColor *titleColor;
+@property (nonatomic, strong,nullable)   UIFont *titlerFont;
+@property (nonatomic, strong,nullable)   UIColor *backgroundColor;
 @property (nonatomic, assign)   CGFloat cornerRadius;
-@property (nonatomic, copy)     UIImage *image;         // default is nil， UIControlStateNormal状态下的图片
-@property (nonatomic, copy)     UIImage *focusImage;    // default is nil， UIControlStateHighlighted状态下的图片
-@property (nonatomic,strong)    UIView  *customView;    // default is nil
-@property (nonatomic)           SEL     action;         // default is NULL
-@property (nonatomic,weak)      id      target;         // default is nil
+@property (nonatomic, copy,nullable)     UIImage *image;         // default is nil， UIControlStateNormal状态下的图片
+@property (nonatomic, copy,nullable)     UIImage *focusImage;    // default is nil， UIControlStateHighlighted状态下的图片
+@property (nonatomic,nullable)           SEL     action;         // default is NULL
+@property (nonatomic,weak,nullable)      id      target;         // default is nil
 
 /// 图片标题布局属性
 @property (nonatomic, assign) QSButtonEdgeInsetsStyle style; // 图片布局样式
