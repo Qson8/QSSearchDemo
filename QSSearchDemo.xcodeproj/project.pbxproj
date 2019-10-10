@@ -29,7 +29,6 @@
 		ECF8BC8F20B53E42000F009B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ECF8BC8720B53E42000F009B /* LaunchScreen.storyboard */; };
 		ECF8BC9020B53E42000F009B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = ECF8BC8920B53E42000F009B /* main.m */; };
 		ECF8BC9120B53E42000F009B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = ECF8BC8A20B53E42000F009B /* AppDelegate.m */; };
-		ECF8BC9220B53E42000F009B /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = ECF8BC8B20B53E42000F009B /* Info.plist */; };
 		ECF8BCA220B54A32000F009B /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = ECF8BCA120B54A32000F009B /* UIView+Extension.m */; };
 		ECF8BCAB20B54EFB000F009B /* NSString+AttributedString.m in Sources */ = {isa = PBXBuildFile; fileRef = ECF8BCAA20B54EFB000F009B /* NSString+AttributedString.m */; };
 		ECF8BCB020B68922000F009B /* QSSearchDemo1.m in Sources */ = {isa = PBXBuildFile; fileRef = ECF8BCAF20B68922000F009B /* QSSearchDemo1.m */; };
@@ -371,7 +370,6 @@
 				EC5DA04320EB444E00E338F3 /* QSSearchView.bundle in Resources */,
 				ECF8BC8D20B53E42000F009B /* Assets.xcassets in Resources */,
 				ECF8BC8F20B53E42000F009B /* LaunchScreen.storyboard in Resources */,
-				ECF8BC9220B53E42000F009B /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -573,7 +571,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = BB535CKPZQ;
+				DEVELOPMENT_TEAM = 62AXVHYTF7;
 				INFOPLIST_FILE = "$(SRCROOT)/QSSearchDemo/System/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -588,7 +586,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = BB535CKPZQ;
+				DEVELOPMENT_TEAM = 62AXVHYTF7;
 				INFOPLIST_FILE = "$(SRCROOT)/QSSearchDemo/System/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
