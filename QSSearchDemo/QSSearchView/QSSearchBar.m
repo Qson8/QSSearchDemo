@@ -72,25 +72,25 @@
     CGFloat x = 0,y = 0,w = 0,h = 0;
     CGFloat searchViewHeight = _searchBarItem.searchBarMarginEdge.top + _searchBarItem.searchContentHeight + _searchBarItem.searchBarMarginEdge.bottom;
     h = _topMargin + searchViewHeight;
-    w = kScreenWidth;
+    w = screenWidth;
     self.frame = CGRectMake(self.x, self.y, w, h);
     
     y = _topMargin;
-    w = kScreenWidth;
+    w = screenWidth;
     h = searchViewHeight;
     self.contentView.frame = CGRectMake(x, y, w, h);
     
     self.searchBarText.y = _searchBarItem.searchBarMarginEdge.top;
     
     y = self.contentView.height - 1;
-    w = kScreenWidth;
+    w = screenWidth;
     h = 1;
     self.lineView.frame = CGRectMake(x, y, w, h);
     
     if(_rightButtonItem.customView) {
         w = self.rightButton.width;
         h = _searchBarItem.searchContentHeight;
-        x = kScreenWidth - w  - _rightButtonItem.marginEdge.right;
+        x = screenWidth - w  - _rightButtonItem.marginEdge.right;
         y = (searchViewHeight * 0.5 - h * 0.5);
         self.rightButton.frame = CGRectMake(x, y, w, h);
     }
@@ -98,7 +98,7 @@
         if(_rightButtonItem.title.length || _rightButtonItem.image) {
             w = self.rightButton.width;
             h = MIN(self.rightButton.height,_searchBarItem.searchContentHeight);
-            x = kScreenWidth - w  - _rightButtonItem.marginEdge.right;
+            x = screenWidth - w  - _rightButtonItem.marginEdge.right;
             y = (searchViewHeight * 0.5 - h * 0.5);
             self.rightButton.frame = CGRectMake(x, y, w, h);
         }

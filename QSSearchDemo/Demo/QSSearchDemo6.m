@@ -74,7 +74,7 @@
 {
     if (_searchBar == nil) {
 
-        CGRect frame = CGRectMake(0, kNavigationBarHeight, kScreenWidth, kSearchBarH);
+        CGRect frame = CGRectMake(0, kNavigationBarHeight, screenWidth, kSearchBarH);
         QSSearchBar *customSearchBar = [[QSSearchBar alloc] initWithFrame:frame];
         customSearchBar.topMargin = 0;
         customSearchBar.delegate = self;

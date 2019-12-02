@@ -243,20 +243,20 @@
 		ECF8BC9C20B5471E000F009B /* Categary */ = {
 			isa = PBXGroup;
 			children = (
-				EC132B4D211AF0C8006EBB6B /* UIButton+Layout.h */,
-				EC132B4C211AF0C8006EBB6B /* UIButton+Layout.m */,
-				ECF8BCB120B68A7F000F009B /* UINavigationController+FDFullscreenPopGesture.h */,
-				ECF8BCB220B68A7F000F009B /* UINavigationController+FDFullscreenPopGesture.m */,
-				ECF8BCA020B54A32000F009B /* UIView+Extension.h */,
-				ECF8BCA120B54A32000F009B /* UIView+Extension.m */,
 				ECF8BCA920B54EFB000F009B /* NSString+AttributedString.h */,
 				ECF8BCAA20B54EFB000F009B /* NSString+AttributedString.m */,
 				EC5D9F4E20EB06DD00E338F3 /* QSSearchBarButtonItem+Extension.h */,
 				EC5D9F4F20EB06DD00E338F3 /* QSSearchBarButtonItem+Extension.m */,
 				EC5D9F5120EB06FA00E338F3 /* QSSearchBarSearchItem+Extension.h */,
 				EC5D9F5220EB06FA00E338F3 /* QSSearchBarSearchItem+Extension.m */,
+				EC132B4D211AF0C8006EBB6B /* UIButton+Layout.h */,
+				EC132B4C211AF0C8006EBB6B /* UIButton+Layout.m */,
 				EC5DA03F20EB438B00E338F3 /* UIImage+Extension.h */,
 				EC5DA04020EB438B00E338F3 /* UIImage+Extension.m */,
+				ECF8BCB120B68A7F000F009B /* UINavigationController+FDFullscreenPopGesture.h */,
+				ECF8BCB220B68A7F000F009B /* UINavigationController+FDFullscreenPopGesture.m */,
+				ECF8BCA020B54A32000F009B /* UIView+Extension.h */,
+				ECF8BCA120B54A32000F009B /* UIView+Extension.m */,
 			);
 			path = Categary;
 			sourceTree = "<group>";

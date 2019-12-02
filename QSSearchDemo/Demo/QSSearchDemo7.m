@@ -85,9 +85,9 @@
             QSSearchBarButtonItem *item = [QSSearchBarButtonItem defaultSearchBarButtonItem];
             item.image = [UIImage imageWithImageName:@"mirror_search"];
             item.focusImage = [UIImage imageWithImageName:@"mirror_search"];
-            item.title = @"发布";
-            item.titlerFont = [UIFont systemFontOfSize:10];
-            item.titleColor = [UIColor whiteColor];
+//            item.title = @"发布";
+//            item.titlerFont = [UIFont systemFontOfSize:10];
+//            item.titleColor = [UIColor whiteColor];
             item.contentEdge = edge;
             item.target = self;
             item.action = @selector(didClickRightBtn);

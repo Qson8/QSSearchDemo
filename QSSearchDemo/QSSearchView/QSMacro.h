@@ -29,25 +29,34 @@
 #define kMargin (10)
 
 // iphoneX适配用
-#define IS_IPHONE_X (fabs((double)[[UIScreen mainScreen] bounds].size.height - (double)812)<DBL_EPSILON)
+#define IS_IPHONE_X (([[UIApplication sharedApplication] statusBarFrame].size.height == 44.0f) ? (YES):(NO))
 
-#define kScreenWidth ([[UIScreen mainScreen] bounds].size.width)
-#define kStatusBarHeight ((statusBarH == kStatusBarDefHeight) ? kStatusBarDefHeight : (([[UIApplication sharedApplication] statusBarFrame].size.height == kStatusBarMaxHeight) ? kStatusBarDefHeight : 0.0f))
-
-#define kScreenWidth ([[UIScreen mainScreen] bounds].size.width)
-#define kScreenHeight    ((statusBarH > kStatusBarDefHeight) ? [UIScreen mainScreen].bounds.size.height - kStatusBarDefHeight : [UIScreen mainScreen].bounds.size.height)
-
-#define kSafeAreaBottom (IS_IPHONE_X ? 34 : 0)
-#define kSafeAreaTop (IS_IPHONE_X ? kStatusBarHeight : 0)
-#define kNavigationBarHeight (kStatusBarHeight + 44)
 
 // kStatusBar
 // 状态栏默认高度
-#define kStatusBarDefHeight IS_IPHONE_X ? 44.0f : 20.0f
-// 状态栏最大高度
-#define kStatusBarMaxHeight IS_IPHONE_X ? 44.0f : 40.0f
+#define kStatusBarDefHeight (IS_IPHONE_X ? 44.0f : 20.0f)
+// 状态栏最大高度(通话中)
+#define kStatusBarMaxHeight (IS_IPHONE_X ? 44.0f : 40.0f)
 
 #define statusBarH (IS_IPHONE_X ? 44.0 : [[UIApplication sharedApplication] statusBarFrame].size.height)
+
+#define ScreenWidth     ([UIScreen mainScreen].bounds.size.width)
+#define ScreenHeight    ((statusBarH > kStatusBarDefHeight) ? [UIScreen mainScreen].bounds.size.height - kStatusBarDefHeight : [UIScreen mainScreen].bounds.size.height)
+
+#define kStatusBarHeight ((statusBarH == kStatusBarDefHeight) ? kStatusBarDefHeight : (([[UIApplication sharedApplication] statusBarFrame].size.height == kStatusBarMaxHeight) ? kStatusBarDefHeight : 0.0f))
+#define kiPhoneXSafeBottomHeight (IS_IPHONE_X ? 34 : 0)
+#define kiPhoneXSafeTopHeight (IS_IPHONE_X ? kStatusBarHeight : 0)
+#define kNavigationBarHeight (kStatusBarHeight + 44)
+
+// 屏幕尺寸
+#define screenWidth     [UIScreen mainScreen].bounds.size.width
+#define screenHeight    [UIScreen mainScreen].bounds.size.height
+#define kStatusBarDefHeight (IS_IPHONE_X ? 44.0f : 20.0f)
+
+#define  StatusBarHeight      (IS_IPHONE_X ? 44.f : 20.f)
+#define  NavgationBarHeight  (IS_IPHONE_X ? 88.f : 64.f)
+#define TabBarHeight (IS_IPHONE_X ? (49.f+34.f) : 49.f)
+#define SafeBottomHeight (IS_IPHONE_X ? 34.f : 0.f)
 
 #define QSColor(r,g,b,a) [UIColor colorWithRed:r/255.0 green:g/255.0 blue:b/255.0 alpha:a]
 
