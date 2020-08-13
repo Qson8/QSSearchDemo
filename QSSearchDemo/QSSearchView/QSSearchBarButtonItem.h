@@ -10,7 +10,7 @@
 #import "UIButton+Layout.h"
 
 @interface QSSearchBarButtonItem : NSObject
-@property (nonatomic,strong, nullable)    UIView  *customView;    // default is nil 有值，其他属性失效
+@property (nonatomic,strong, nullable)    UIView  *customView;    // default is nil (有值，其他属性失效)
 
 @property (nonatomic,copy,nullable)      NSString *title;       // default is nil
 @property (nonatomic, strong,nullable)   UIColor *titleColor;

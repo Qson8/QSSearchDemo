@@ -189,7 +189,8 @@
     [self.leftButton setBackgroundColor:leftButtonItem.backgroundColor];
     self.leftButton.layer.cornerRadius = leftButtonItem.cornerRadius;
     
-    [self.leftButton layoutButtonWithEdgeInsetsStyle:leftButtonItem.style imageTitleSpace:leftButtonItem.imageTitleSpace];
+    if(leftButtonItem.imageTitleSpace)
+        [self.leftButton layoutButtonWithEdgeInsetsStyle:leftButtonItem.style imageTitleSpace:leftButtonItem.imageTitleSpace];
     
     
     [self.leftButton sizeToFit];
@@ -218,7 +219,8 @@
         [self.rightButton setContentEdgeInsets:rightButtonItem.contentEdge];
         [self.rightButton setBackgroundColor:rightButtonItem.backgroundColor];
         self.rightButton.layer.cornerRadius = rightButtonItem.cornerRadius;
-        [self.rightButton layoutButtonWithEdgeInsetsStyle:rightButtonItem.style imageTitleSpace:rightButtonItem.imageTitleSpace];
+        if(rightButtonItem.imageTitleSpace)
+            [self.rightButton layoutButtonWithEdgeInsetsStyle:rightButtonItem.style imageTitleSpace:rightButtonItem.imageTitleSpace];
 
         
         [self.rightButton sizeToFit];
